@@ -1,6 +1,18 @@
+import Navigation from "./components/Navigation"
+import Hero from "./components/Hero"
+import About from "./components/About"
+
 function App() {
   return (
-    <h1>Jennie Modd</h1>
+    <>
+      <Navigation />
+
+      <main>
+      <Hero />
+      <About />
+        <h1>Jennie Modd</h1>
+      </main>
+    </>
   )
 }
 
