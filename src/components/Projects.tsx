@@ -4,13 +4,13 @@ import ProjectCard from "./ProjectCard"
 import { useState } from "react"
 
 function Projects() {
-  const [selectedTechnology, setSelectedTechnology] = useState("Alla")
+  const [selectedCategory, setSelectedCategory] = useState("Alla")
   const filteredProjects = projects.filter((project) => {
-  if (selectedTechnology === "Alla") {
+  if (selectedCategory === "Alla") {
     return true
   }
 
-  return project.technologies.includes(selectedTechnology)
+  return project.category === selectedCategory
 }) 
   return (
     <section id="projects">
@@ -23,19 +23,21 @@ function Projects() {
         digitala lösningar och användarupplevelser.
       </p>
 
-      <div>
-  {["Alla", "JavaScript", "TypeScript", "React", "SCSS"].map(
-    (technology) => (
+      
+<div>
+  {["Alla", "Webbutveckling", "Digital marknadsföring"].map(
+    (category) => (
       <button
-        key={technology}
-        onClick={() => setSelectedTechnology(technology)}
-        aria-pressed={selectedTechnology === technology}
+        key={category}
+        onClick={() => setSelectedCategory(category)}
+        aria-pressed={selectedCategory === category}
       >
-        {technology}
+        {category}
       </button>
     )
   )}
 </div>
+
 
       <div>
         {filteredProjects.map((project) => (

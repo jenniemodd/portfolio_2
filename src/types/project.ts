@@ -3,6 +3,7 @@ export type Project = {
   id: number
   title: string
   description: string
+  category: "Webbutveckling" | "Digital marknadsföring"
   technologies: string[]
   image: string
   githubUrl: string
