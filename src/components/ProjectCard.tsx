@@ -17,24 +17,32 @@ function ProjectCard({ project }: ProjectCardProps) {
       <p>{project.description}</p>
 
       <div>
-        {project.technologies.map((technology) => (
-          <span key={technology}>{technology}</span>
+        {project.tags.map((tag) => (
+          <span key={tag}>{tag}</span>
         ))}
       </div>
 
       <div>
-        {project.githubUrl && (
-          <a href={project.githubUrl} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        )}
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      GitHub
+    </a>
+  )}
 
-        {project.liveUrl && (
-          <a href={project.liveUrl} target="_blank" rel="noreferrer">
-            Besök projektet
-          </a>
-        )}
-      </div>
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      Besök projektet
+    </a>
+  )}
+</div>
     </article>
   )
 }

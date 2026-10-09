@@ -4,8 +4,8 @@ export type Project = {
   title: string
   description: string
   category: "Webbutveckling" | "Digital marknadsföring"
-  technologies: string[]
+  tags: string[]
   image: string
-  githubUrl: string
-  liveUrl: string
+  githubUrl?: string
+liveUrl?: string
 }
