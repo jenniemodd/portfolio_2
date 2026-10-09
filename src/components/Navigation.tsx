@@ -1,15 +1,24 @@
+
+import styles from "./Navigation.module.css"
+
 function Navigation() {
   return (
-    <nav>
-      <a href="/">Jennie Modd</a>
+    <header className={styles.header}>
+      <a href="/" className={styles.logo}>
+        Jennie <span>Modd</span>
+      </a>
 
-      <div>
+      <nav className={styles.nav} aria-label="Huvudnavigation">
         <a href="#about">Om mig</a>
         <a href="#services">Tjänster</a>
         <a href="#projects">Projekt</a>
         <a href="#contact">Kontakt</a>
-      </div>
-    </nav>
+      </nav>
+
+      <a href="#contact" className={styles.contactLink}>
+        Säg hej <span aria-hidden="true">↗</span>
+      </a>
+    </header>
   )
 }
 

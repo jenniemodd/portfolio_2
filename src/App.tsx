@@ -1,3 +1,4 @@
+
 import Navigation from "./components/Navigation"
 import Hero from "./components/Hero"
 import About from "./components/About"
@@ -10,11 +11,10 @@ function App() {
       <Navigation />
 
       <main>
-      <Hero />
-      <About />
-      <Services />
-      <Projects />
-        <h1>Jennie Modd</h1>
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
       </main>
     </>
   )
