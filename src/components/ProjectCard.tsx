@@ -10,6 +10,8 @@ function ProjectCard({ project }: ProjectCardProps) {
     <article>
       <img src={project.image} alt={`Skärmbild från ${project.title}`} />
 
+      <p>{project.category}</p>
+<h3>{project.title}</h3>
       <h3>{project.title}</h3>
 
       <p>{project.description}</p>
