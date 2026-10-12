@@ -40,7 +40,7 @@ function Hero() {
 
       <div className={styles.visual}>
         <img
-          src="/images/jennie-modd.jpg"
+          src="/images/jenniemodd-work.jpg"
           alt="Jennie Modd, frontendutvecklare och digital marknadsförare"
         />
       </div>
