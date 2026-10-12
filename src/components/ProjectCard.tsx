@@ -1,65 +1,77 @@
 
 import type { Project } from "../types/project"
+import styles from "./ProjectCard.module.css"
 
 type ProjectCardProps = {
   project: Project
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
+  const hasResults = Boolean(project.results?.length)
+
   return (
-    <article>
+    <article
+      className={`${styles.card} ${
+        hasResults ? styles.featured : ""
+      }`}
+    >
       <img
+        className={styles.image}
         src={project.image}
         alt={`Skärmbild från ${project.title}`}
       />
 
-      <p>{project.category}</p>
+      <div className={styles.content}>
+        <p>{project.category}</p>
 
-      <h3>{project.title}</h3>
+        <h3>{project.title}</h3>
 
-      <p>{project.description}</p>
+        <p>{project.description}</p>
 
-      {project.results && project.results.length > 0 && (
-        <div className="project-results">
-          <p className="project-results-title">Resultat</p>
+        {hasResults && (
+          <div className={styles.results}>
+            <p className={styles.resultsTitle}>Resultat</p>
 
-          <div className="project-results-list">
-            {project.results.map((result) => (
-              <div className="project-result" key={result.label}>
-                <p className="project-result-value">{result.value}</p>
-                <p className="project-result-label">{result.label}</p>
-              </div>
-            ))}
+            <div className={styles.resultsList}>
+              {project.results!.map((result) => (
+                <div className={styles.result} key={result.label}>
+                  <p className={styles.resultValue}>{result.value}</p>
+                  <p className={styles.resultLabel}>{result.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
+        )}
+
+        <div className={styles.tags}>
+          {project.tags.map((tag) => (
+            <span className={styles.tag} key={tag}>
+              {tag}
+            </span>
+          ))}
         </div>
-      )}
 
-      <div>
-        {project.tags.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
+        <div className={styles.links}>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          )}
 
-      <div>
-        {project.githubUrl && (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        )}
-
-        {project.liveUrl && (
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Besök projektet
-          </a>
-        )}
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Besök projektet
+            </a>
+          )}
+        </div>
       </div>
     </article>
   )

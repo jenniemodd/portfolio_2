@@ -1,0 +1,136 @@
+
+.card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.content {
+  min-width: 0;
+}
+
+.content h3 {
+  margin-block: 0.5rem 1rem;
+}
+
+/* Projekt med resultat */
+.featured {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.featured .image {
+  height: 100%;
+  max-height: 38rem;
+  object-fit: cover;
+}
+
+/* Resultatpanel */
+.results {
+  margin-block: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-cream);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.resultsTitle {
+  margin: 0 0 1rem;
+  color: var(--color-ink-soft);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resultsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.result {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.result:nth-child(odd) {
+  padding-left: 0;
+}
+
+.result:nth-child(even) {
+  border-left: 1px solid var(--color-line);
+}
+
+.result:nth-child(n + 3) {
+  border-top: 1px solid var(--color-line);
+}
+
+.resultValue {
+  margin: 0 0 0.4rem;
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.resultLabel {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Taggar */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+
+/* Länkar */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+  .featured {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featured .image {
+    height: auto;
+    max-height: none;
+  }
+
+  .results {
+    padding: 1rem;
+  }
+
+  .result {
+    padding: 0.75rem;
+  }
+
+  .resultValue {
+    font-size: 1.35rem;
+  }
+
+  .resultLabel {
+    font-size: 0.8rem;
+  }
+}
