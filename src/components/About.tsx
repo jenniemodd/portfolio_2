@@ -1,25 +1,76 @@
+
+import styles from "./About.module.css"
+
 function About() {
   return (
-    <section id="about">
-      <div>
-        <p>01 — Om mig</p>
+    <section className={styles.about} id="about">
+      <p className={styles.eyebrow}>01 · Om mig</p>
 
-        <h2>
-          Från marknadsföring till frontend.
-        </h2>
+      <h2 className={styles.heading}>
+        Mellan människa
+        <br />
+        och maskin.
+      </h2>
 
-        <p>
-          Jag har en bakgrund inom digital marknadsföring och studerar
-          idag till Front End Developer. Jag kombinerar därför teknisk
-          utveckling med förståelse för användare, innehåll, SEO och
-          konvertering.
-        </p>
+      <div className={styles.content}>
+        <div className={styles.visual}>
+          <div className={styles.imageFrame}>
+            <img
+              src="/images/jennie-modd.jpg"
+              alt="Porträtt av mig, frontendutvecklare och digital marknadsförare"
+              className={styles.portrait}
+            />
+          </div>
 
-        <a href="#contact">Låt oss prata</a>
-      </div>
+          <div className={styles.note}>
+            Kreativ
+            <br />
+            problemlösare
+            <br />
+            sedan alltid.
+          </div>
+        </div>
 
-      <div>
-        {/* Porträttbild kommer här */}
+        <div className={styles.copy}>
+          <p className={styles.lead}>
+            Jag är en Front End Developer med flera års
+            erfarenhet av digital marknadsföring — en
+            kombination som låter mig se både helheten
+            och detaljerna.
+          </p>
+
+          <p className={styles.description}>
+            Min bakgrund inom strategi, analys, SEO och
+            konvertering har lärt mig att en snygg webb
+            aldrig är målet i sig. Den ska vara enkel att
+            använda, kännas rätt och göra verklig skillnad.
+          </p>
+
+          <div className={styles.stats}>
+            <div className={styles.stat}>
+              <span className={styles.statNumber}>8+</span>
+              <p>
+                år inom digital
+                <br />
+                marknadsföring
+              </p>
+            </div>
+
+            <div className={styles.stat}>
+              <span className={styles.statNumber}>∞</span>
+              <p>
+                nyfikenhet på
+                <br />
+                människor & teknik
+              </p>
+            </div>
+          </div>
+
+          <a href="#contact" className={styles.button}>
+            Mer om min bakgrund
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
   )
