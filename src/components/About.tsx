@@ -15,7 +15,7 @@ function About() {
       <div className={styles.content}>
         <div className={styles.visual}>
             <img
-              src="/images/jennie-modd.jpg"
+              src="/images/jennie_modd.jpg"
               alt="Porträtt av mig, frontendutvecklare och digital marknadsförare"
               className={styles.portrait}
             />
