@@ -37,7 +37,7 @@
   --space-section: clamp(5.5rem, 10vw, 9rem);
 
   /* Layout */
-  --page: min(100% - 3rem, 78rem);
+  --page: min(100% - 2rem, 78rem);
 
   /* Shape and effects */
   --radius-sm: 0.75rem;
