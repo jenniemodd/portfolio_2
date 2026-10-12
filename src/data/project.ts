@@ -7,7 +7,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Fairly",
     description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
-    category: "Front End Utveckling",
+    category: "Front end-utveckling",
     tags: ["TypeScript", "HTML", "SCSS","Vite",],
     image: "/images/fairly.jpg",
     githubUrl: "",
@@ -35,13 +35,31 @@ export const projects: Project[] = [
   ],
   image: "/images/funasfjallen_logga.jpeg",
   liveUrl: "https://funasfjallen.se/",
+  results: [
+  {
+    value: "+100 %",
+    label: "Ökning av organisk trafik på ett år",
+  },
+  {
+    value: "+29 %",
+    label: "Ökad omsättning",
+  },
+  {
+    value: "22 → 32 000",
+    label: "Följare i sociala medier",
+  },
+  {
+    value: "Ökad synlighet",
+    label: "I AI-sök och på mer specifika sökningar",
+  },
+],
 },
 
 {
     id: 3,
     title: "JAL Book Club",
     description: "Skolprojekt med fokus på API-utveckling. En online bokklubb, med boklistor och funktioner för att utforska böcker samt lämna recensioner.",
-    category: "Front End Utveckling",
+    category: "Front end-utveckling",
     tags: ["TypeScript", "HTML", "SCSS","Vite","Biome",],
     image: "/images/jal-book-club.png",
     githubUrl: "",
@@ -66,13 +84,27 @@ export const projects: Project[] = [
     "Episerver",
   ],
   image: "/images/ramundberget_logga.jpg",
+  results: [
+  {
+    value: "+20 %",
+    label: "Ökning av organisk trafik på ett år",
+  },
+  {
+    value: "+25 %",
+    label: "Ökad omsättning under ett år",
+  },
+  {
+    value: "12 → 19 000",
+    label: "Följare i sociala medier under ett år",
+  },
+],
 },
 
   {
     id: 5,
     title: "Alice in Wonderland",
     description: "Ett interaktivt spel utvecklat i ett grupprojekt med TypeScript.",
-    category: "Front End Utveckling",
+    category: "Front end-utveckling",
     tags: ["TypeScript", "Vite", "SCSS"],
     image: "/images/alice-in-wonderland.png",
     githubUrl: "",
@@ -82,7 +114,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Gotfridsmunkar",
     description: "Mitt första typescript projekt där jag byggde en enklare e-handel med produktlista, produktdetaljsida och kundvagn.",
-    category: "Front End Utveckling",
+    category: "Front end-utveckling",
     tags: ["TypeScript", "Vite", "SCSS"],
     image: "/images/donut_shop.jpg",
     githubUrl: "",

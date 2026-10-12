@@ -237,6 +237,64 @@
   font-size: 1.6rem;
 }
 
+
+/* Projektresultat */
+.project-results {
+  margin-block: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-cream);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.project-results-title {
+  margin: 0 0 1rem;
+  color: var(--color-ink-soft);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-results-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-result {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.project-result:nth-child(odd) {
+  padding-left: 0;
+}
+
+.project-result:nth-child(even) {
+  border-left: 1px solid var(--color-line);
+}
+
+.project-result:nth-child(n + 3) {
+  border-top: 1px solid var(--color-line);
+}
+
+.project-result-value {
+  margin: 0 0 0.4rem;
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.project-result-label {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* Surfplatta */
 
 @media (max-width: 900px) {
@@ -288,6 +346,23 @@
   }
 }
 
+@media (max-width: 600px) {
+  .project-results {
+    padding: 1rem;
+  }
+
+  .project-result {
+    padding: 0.75rem;
+  }
+
+  .project-result-value {
+    font-size: 1.35rem;
+  }
+
+  .project-result-label {
+    font-size: 0.8rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .card,
   .filter {

@@ -1,18 +1,24 @@
 
+export type ProjectResult = {
+  value: string
+  label: string
+}
+
 export type Project = {
   id: number
   title: string
   description: string
-  category: "Front End Utveckling" | "Digital marknadsföring"
+  category: "Front end-utveckling" | "Digital marknadsföring"
   tags: string[]
   image: string
   githubUrl?: string
   liveUrl?: string
+  results?: ProjectResult[]
 }
 
 export const projectFilters = [
   "Alla",
-  "Front End Utveckling",
+  "Front end-utveckling",
   "Digital marknadsföring",
 ] as const
 
