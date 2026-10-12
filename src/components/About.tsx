@@ -14,13 +14,11 @@ function About() {
 
       <div className={styles.content}>
         <div className={styles.visual}>
-          <div className={styles.imageFrame}>
             <img
               src="/images/jennie-modd.jpg"
               alt="Porträtt av mig, frontendutvecklare och digital marknadsförare"
               className={styles.portrait}
             />
-          </div>
 
           <div className={styles.note}>
             Kreativ
