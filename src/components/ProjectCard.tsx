@@ -4,15 +4,19 @@ import styles from "./ProjectCard.module.css"
 
 type ProjectCardProps = {
   project: Project
+  featured?: boolean
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({
+  project,
+  featured = false,
+}: ProjectCardProps) {
   const hasResults = Boolean(project.results?.length)
 
   return (
     <article
       className={`${styles.card} ${
-        hasResults ? styles.featured : ""
+        featured ? styles.featured : ""
       }`}
     >
       <img
@@ -35,8 +39,13 @@ function ProjectCard({ project }: ProjectCardProps) {
             <div className={styles.resultsList}>
               {project.results!.map((result) => (
                 <div className={styles.result} key={result.label}>
-                  <p className={styles.resultValue}>{result.value}</p>
-                  <p className={styles.resultLabel}>{result.label}</p>
+                  <p className={styles.resultValue}>
+                    {result.value}
+                  </p>
+
+                  <p className={styles.resultLabel}>
+                    {result.label}
+                  </p>
                 </div>
               ))}
             </div>

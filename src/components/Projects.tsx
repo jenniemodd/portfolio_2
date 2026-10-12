@@ -1,11 +1,13 @@
+
 import { useState } from "react"
 import { projects } from "../data/project"
-import styles from "./Projects.module.css"
 import {
   projectFilters,
   type Project,
   type ProjectFilter,
 } from "../types/project"
+import ProjectCard from "./ProjectCard"
+import styles from "./Projects.module.css"
 
 function Projects() {
   const [activeFilter, setActiveFilter] =
@@ -15,12 +17,7 @@ function Projects() {
     activeFilter === "Alla"
       ? projects
       : projects.filter(
-          (project) =>
-            project.category === activeFilter ||
-            project.tags.some(
-              (tag) =>
-                tag.toLowerCase() === activeFilter.toLowerCase(),
-            ),
+          (project) => project.category === activeFilter,
         )
 
   const featuredProject = filteredProjects[0]
@@ -67,69 +64,9 @@ function Projects() {
           )}
         </div>
       ) : (
-        <p>Inga projekt matchar den valda kategorin ännu.</p>
+        <p>Inga projekt matchar det valda filtret ännu.</p>
       )}
     </section>
-  )
-}
-
-function ProjectCard({
-  project,
-  featured = false,
-}: {
-  project: Project
-  featured?: boolean
-}) {
-  return (
-    <article
-      className={`${styles.card} ${
-        featured ? styles.featured : styles.standard
-      }`}
-    >
-      <div className={styles.preview}>
-        <img
-          src={project.image}
-          alt={`Förhandsvisning av ${project.title}`}
-        />
-      </div>
-
-      <div className={styles.info}>
-        <span className={styles.projectNumber}>
-          {String(project.id).padStart(2, "0")}
-        </span>
-
-        <p className={styles.projectCategory}>{project.category}</p>
-
-        <h3>{project.title}</h3>
-
-        <p className={styles.description}>{project.description}</p>
-
-        <div className={styles.tags}>
-          {project.tags.map((tag) => (
-            <span className={styles.tag} key={tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {(project.liveUrl || project.githubUrl) && (
-          <div className={styles.links}>
-            {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                ↗ <span>Se projekt</span>
-              </a>
-            )}
-
-            {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                <span aria-hidden="true">⌘</span>
-                <span>GitHub</span>
-              </a>
-            )}
-          </div>
-        )}
-      </div>
-    </article>
   )
 }
 
