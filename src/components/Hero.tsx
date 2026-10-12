@@ -1,25 +1,48 @@
+
+import styles from "./Hero.module.css"
+
 function Hero() {
   return (
-    <section>
-      <div>
-        <p>Front End Developer & Digital Marketer</p>
-
-        <h1>
-          Jag bygger digitala upplevelser
-          <br />
-          som gör skillnad.
-        </h1>
-
-        <p>
-          Jag kombinerar frontendutveckling, digital marknadsföring
-          och UX för att skapa genomtänkta digitala lösningar.
+    <section className={styles.hero} id="home">
+      <div className={styles.copy}>
+        <p className={styles.eyebrow}>
+          Front End Developer · Digital kreatör
         </p>
 
-        <a href="#projects">Se mina projekt</a>
+        <h1>
+          Jennie
+          <br />
+          Modd<span>.</span>
+        </h1>
+
+        <p className={styles.lead}>
+          Jag bygger digitala upplevelser där{" "}
+          <strong>kod, innehåll och affär</strong> arbetar
+          åt samma håll.
+        </p>
+
+        <div className={styles.actions}>
+          <a
+            href="#projects"
+            className={`${styles.button} ${styles.primary}`}
+          >
+            Se mina projekt <span aria-hidden="true">→</span>
+          </a>
+
+          <a
+            href="#about"
+            className={`${styles.button} ${styles.secondary}`}
+          >
+            Lär känna mig <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
-      <div>
-        {/* Bild/illustration kommer här */}
+      <div className={styles.visual}>
+        <img
+          src="/images/jennie-modd.jpg"
+          alt="Jennie Modd, frontendutvecklare och digital marknadsförare"
+        />
       </div>
     </section>
   )
