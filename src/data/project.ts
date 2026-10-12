@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
     category: "Front End Utveckling",
     tags: ["TypeScript", "HTML", "SCSS","Vite",],
-    image: "/images/fairly.png",
+    image: "/images/fairly.jpg",
     githubUrl: "",
     liveUrl: "",
   },
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     "PR",
 
   ],
-  image: "/images/destination-funasfjallen.png",
+  image: "/images/funasfjallen_logga.jpeg",
   liveUrl: "https://funasfjallen.se/",
 },
 
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     "Google Analytics",
     "Episerver",
   ],
-  image: "/images/ramundberget-alpina-ab.png",
+  image: "/images/ramundberget_logga.jpg",
 },
 
   {
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     description: "Mitt första typescript projekt där jag byggde en enklare e-handel med produktlista, produktdetaljsida och kundvagn.",
     category: "Front End Utveckling",
     tags: ["TypeScript", "Vite", "SCSS"],
-    image: "/images/gotfridsmunkar.png",
+    image: "/images/donut_shop.jpg",
     githubUrl: "",
     liveUrl: "",
   },
