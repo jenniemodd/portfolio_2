@@ -1,8 +1,4 @@
 
-/* ========================================
-   PROJECTS
-   ======================================== */
-
 .projects {
   width: var(--page);
   margin-inline: auto;
@@ -46,7 +42,7 @@
   line-height: 0.98;
 }
 
-/* Filter */
+/* Filterknappar */
 
 .filters {
   display: flex;
@@ -73,7 +69,6 @@
 
 .filter:hover {
   border-color: var(--color-ink);
-  color: var(--color-ink);
 }
 
 .filterActive {
@@ -82,17 +77,7 @@
   color: white;
 }
 
-.filterActive:hover {
-  color: white;
-}
-
-.filter:focus-visible,
-.links a:focus-visible {
-  outline: 2px solid var(--color-coral);
-  outline-offset: 3px;
-}
-
-/* Projektkort */
+/* Projektlayout */
 
 .projectList {
   display: grid;
@@ -100,7 +85,7 @@
 }
 
 .card {
-  position: relative;
+  display: grid;
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--color-line);
@@ -112,23 +97,40 @@
 }
 
 .card:hover {
+  transform: translateY(-0.15rem);
   box-shadow: var(--shadow);
 }
 
-/* Stort utvalt projekt */
-
 .featured {
-  display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
 }
 
-.featuredPreview {
+.standard {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.preview {
   min-width: 0;
   padding: 1rem;
   background: var(--color-paper);
 }
 
-.featuredInfo {
+.preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 14rem;
+  max-height: 30rem;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: top center;
+}
+
+.featured .preview img {
+  min-height: 25rem;
+}
+
+.info {
   position: relative;
   display: flex;
   min-width: 0;
@@ -147,17 +149,16 @@
 }
 
 .projectCategory {
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.5rem;
   padding-right: 1.5rem;
   font-size: 0.68rem;
   line-height: 1.5;
 }
 
-.featuredInfo h3,
-.cardInfo h3 {
+.info h3 {
   margin: 0 0 1rem;
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 1.1;
@@ -170,7 +171,7 @@
   line-height: 1.75;
 }
 
-/* Etiketter */
+/* Tekniketiketter */
 
 .tags {
   display: flex;
@@ -185,7 +186,7 @@
   background: var(--color-cream);
   color: var(--color-ink-soft);
   font-size: 0.7rem;
-  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Projektlänkar */
@@ -207,217 +208,48 @@
   color: var(--color-ink);
   font-size: 0.78rem;
   font-weight: 600;
-  transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
 .links a:hover {
   color: var(--color-pink);
 }
 
-/* Två mindre projektkort */
+/* Mindre projekt */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 2rem;
 }
 
-.cardPreview {
-  min-width: 0;
-  padding: 1rem;
-  background: var(--color-paper);
+.standard .preview img {
+  min-height: 12rem;
+  max-height: 20rem;
 }
 
-.cardInfo {
-  position: relative;
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5rem 1.5rem 1.75rem;
+.standard .info {
+  padding: 1.5rem;
 }
 
-.cardInfo .projectCategory {
-  margin-bottom: 1.75rem;
+.standard .info h3 {
+  font-size: 1.6rem;
 }
 
-.cardInfo h3 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-.cardInfo .description {
-  font-size: 0.9rem;
-}
-
-/* ========================================
-   WEBBMOCKUPS
-   ======================================== */
-
-.mockup {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 0.6rem;
-  background: white;
-}
-
-.browserBar {
-  display: flex;
-  height: 2.2rem;
-  align-items: center;
-  gap: 0.3rem;
-  padding-inline: 0.8rem;
-  background: #fbf9f7;
-}
-
-.browserBar span {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: #d7d3d1;
-}
-
-/* Northbound */
-
-.northbound {
-  padding: 0.5rem;
-  background: var(--color-cream);
-}
-
-.northboundScreen {
-  position: relative;
-  display: flex;
-  min-height: clamp(18rem, 32vw, 26rem);
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  overflow: hidden;
-  background: linear-gradient(145deg, #d9bdcf 0%, #603750 48%, #392431 100%);
-  color: white;
-}
-
-.mockupLabel {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 1;
-  font-size: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-}
-
-.northboundScreen h3 {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 1rem;
-  font-family: var(--font-heading);
-  font-size: clamp(1.7rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.06em;
-  line-height: 0.98;
-}
-
-.sun {
-  position: absolute;
-  top: 18%;
-  right: 22%;
-  width: clamp(3.5rem, 8vw, 5.5rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #d7b55f;
-}
-
-.mockupButton {
-  position: relative;
-  z-index: 1;
-  padding: 0.55rem 0.8rem;
-  border-radius: 999px;
-  background: white;
-  color: var(--color-ink);
-  font-size: 0.48rem;
-  font-weight: 700;
-}
-
-/* Studio Forma */
-
-.formaScreen,
-.growScreen {
-  position: relative;
-  display: flex;
-  min-height: clamp(15rem, 25vw, 20rem);
-  align-items: center;
-  padding: clamp(1.5rem, 3vw, 2rem);
-  overflow: hidden;
-  background: var(--color-paper);
-  color: var(--color-ink);
-}
-
-.formaScreen h3 {
-  position: relative;
-  z-index: 1;
-  margin: 1rem 0 0;
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 0.88;
-}
-
-.formaCircle {
-  position: absolute;
-  right: 10%;
-  bottom: -10%;
-  width: 48%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--color-pink);
-}
-
-/* Grow / Together */
-
-.growScreen {
-  background: var(--color-cream);
-}
-
-.growScreen h3 {
-  position: relative;
-  z-index: 1;
-  margin: 1rem 0 0;
-  font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.07em;
-  line-height: 1.05;
-}
-
-.growStar {
-  position: absolute;
-  right: 10%;
-  color: var(--color-coral);
-  font-size: clamp(3rem, 7vw, 5rem);
-}
-
-/* ========================================
-   RESPONSIVITET
-   ======================================== */
+/* Surfplatta */
 
 @media (max-width: 900px) {
   .featured {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .featuredInfo {
-    padding: 2rem;
-  }
-
-  .northboundScreen {
-    min-height: 22rem;
-  }
-
-  .cardInfo {
-    padding: 1.25rem;
+  .featured .preview img {
+    min-height: 20rem;
   }
 }
+
+/* Mobil */
 
 @media (max-width: 650px) {
   .projects {
@@ -437,35 +269,28 @@
     padding-inline: 0.9rem;
   }
 
-  .featuredPreview,
-  .cardPreview {
-    padding: 0.6rem;
-  }
-
-  .featuredInfo {
-    padding: 1.5rem;
-  }
-
-  .northboundScreen {
-    min-height: 17rem;
-    padding: 1.5rem;
-  }
-
   .grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
   }
 
-  .formaScreen,
-  .growScreen {
-    min-height: 16rem;
+  .preview {
+    padding: 0.6rem;
+  }
+
+  .featured .preview img {
+    min-height: 14rem;
+  }
+
+  .info,
+  .standard .info {
+    padding: 1.5rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .card,
-  .filter,
-  .links a {
+  .filter {
     transition: none;
   }
 }

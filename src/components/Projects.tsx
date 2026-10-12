@@ -1,159 +1,34 @@
-
 import { useState } from "react"
+import { projects } from "../data/project"
 import styles from "./Projects.module.css"
-
-type Project = {
-  number: string
-  title: string
-  category: string
-  description: string
-  tags: string[]
-  filters: string[]
-  preview: "northbound" | "forma" | "grow"
-  featured?: boolean
-  caseUrl?: string
-  githubUrl?: string
-}
-
-const filters = [
-  "Alla",
-  "Front End",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Digital Marketing",
-  "UX",
-]
-
-const projects: Project[] = [
-  {
-    number: "01",
-    title: "Northbound",
-    category: "Featured case · Front End",
-    description:
-      "En innehållsdriven reseplattform där inspirerande storytelling möter ett snabbt, tillgängligt och konverterande gränssnitt.",
-    tags: ["React", "TypeScript", "API", "UX"],
-    filters: ["Front End", "TypeScript", "React", "UX"],
-    preview: "northbound",
-    featured: true,
-    caseUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    number: "02",
-    title: "Studio Forma",
-    category: "Webbdesign · Utveckling",
-    description:
-      "En tydlig och varm studiosajt med ett flexibelt komponentsystem och genomtänkta mikrointeraktioner.",
-    tags: ["JavaScript", "Sass", "Figma"],
-    filters: ["Front End", "JavaScript", "UX"],
-    preview: "forma",
-    caseUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    number: "03",
-    title: "Grow/Together",
-    category: "Digital strategi · SEO",
-    description:
-      "En datadriven innehållsstrategi som gör komplexa tjänster enklare att hitta, förstå och välja.",
-    tags: ["SEO", "Analytics", "Content"],
-    filters: ["Digital Marketing", "UX"],
-    preview: "grow",
-    caseUrl: "#",
-    githubUrl: "#",
-  },
-]
-
-function ProjectPreview({ type }: { type: Project["preview"] }) {
-  if (type === "northbound") {
-    return (
-      <div className={`${styles.mockup} ${styles.northbound}`}>
-        <div className={styles.browserBar}>
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className={styles.northboundScreen}>
-          <span className={styles.mockupLabel}>NORTHBOUND</span>
-          <div className={styles.sun} />
-          <h3>
-            Where will you
-            <br />
-            go next?
-          </h3>
-          <span className={styles.mockupButton}>EXPLORE PLACES</span>
-        </div>
-      </div>
-    )
-  }
-
-  if (type === "forma") {
-    return (
-      <div className={`${styles.mockup} ${styles.forma}`}>
-        <div className={styles.browserBar}>
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className={styles.formaScreen}>
-          <span className={styles.mockupLabel}>FORMA®</span>
-          <h3>
-            Ideas
-            <br />
-            with
-            <br />
-            shape.
-          </h3>
-          <div className={styles.formaCircle} />
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <div className={`${styles.mockup} ${styles.grow}`}>
-      <div className={styles.browserBar}>
-        <span />
-        <span />
-        <span />
-      </div>
-      <div className={styles.growScreen}>
-        <span className={styles.mockupLabel}>GROW / TOGETHER</span>
-        <h3>
-          Better visibility.
-          <br />
-          Real momentum.
-        </h3>
-        <span className={styles.growStar} aria-hidden="true">
-          ✳
-        </span>
-      </div>
-    </div>
-  )
-}
+import {
+  projectFilters,
+  type Project,
+  type ProjectFilter,
+} from "../types/project"
 
 function Projects() {
-  const [activeFilter, setActiveFilter] = useState("Alla")
+  const [activeFilter, setActiveFilter] =
+    useState<ProjectFilter>("Alla")
 
-  const visibleProjects =
+  const filteredProjects: Project[] =
     activeFilter === "Alla"
       ? projects
-      : projects.filter((project) =>
-          project.filters.includes(activeFilter),
+      : projects.filter(
+          (project) =>
+            project.category === activeFilter ||
+            project.tags.some(
+              (tag) =>
+                tag.toLowerCase() === activeFilter.toLowerCase(),
+            ),
         )
 
-  const featuredProject = visibleProjects.find(
-    (project) => project.featured,
-  )
-
-  const otherProjects = visibleProjects.filter(
-    (project) => !project.featured,
-  )
+  const featuredProject = filteredProjects[0]
+  const otherProjects = filteredProjects.slice(1)
 
   return (
     <section className={styles.projects} id="projects">
-      <div className={styles.header}>
+      <header className={styles.header}>
         <p className={styles.eyebrow}>03 · Utvalda projekt</p>
 
         <h2>
@@ -162,11 +37,8 @@ function Projects() {
           något på riktigt.
         </h2>
 
-        <div
-          className={styles.filters}
-          aria-label="Filtrera projekt"
-        >
-          {filters.map((filter) => (
+        <div className={styles.filters} aria-label="Filtrera projekt">
+          {projectFilters.map((filter) => (
             <button
               key={filter}
               type="button"
@@ -180,110 +52,84 @@ function Projects() {
             </button>
           ))}
         </div>
+      </header>
+
+      {filteredProjects.length > 0 ? (
+        <div className={styles.projectList}>
+          <ProjectCard project={featuredProject} featured />
+
+          {otherProjects.length > 0 && (
+            <div className={styles.grid}>
+              {otherProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <p>Inga projekt matchar den valda kategorin ännu.</p>
+      )}
+    </section>
+  )
+}
+
+function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: Project
+  featured?: boolean
+}) {
+  return (
+    <article
+      className={`${styles.card} ${
+        featured ? styles.featured : styles.standard
+      }`}
+    >
+      <div className={styles.preview}>
+        <img
+          src={project.image}
+          alt={`Förhandsvisning av ${project.title}`}
+        />
       </div>
 
-      <div className={styles.projectList}>
-        {featuredProject && (
-          <article className={`${styles.card} ${styles.featured}`}>
-            <div className={styles.featuredPreview}>
-              <ProjectPreview type={featuredProject.preview} />
-            </div>
+      <div className={styles.info}>
+        <span className={styles.projectNumber}>
+          {String(project.id).padStart(2, "0")}
+        </span>
 
-            <div className={styles.featuredInfo}>
-              <span className={styles.projectNumber}>
-                {featuredProject.number}
-              </span>
+        <p className={styles.projectCategory}>{project.category}</p>
 
-              <p className={styles.projectCategory}>
-                {featuredProject.category}
-              </p>
+        <h3>{project.title}</h3>
 
-              <h3>{featuredProject.title}</h3>
+        <p className={styles.description}>{project.description}</p>
 
-              <p className={styles.description}>
-                {featuredProject.description}
-              </p>
+        <div className={styles.tags}>
+          {project.tags.map((tag) => (
+            <span className={styles.tag} key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
 
-              <div className={styles.tags}>
-                {featuredProject.tags.map((tag) => (
-                  <span className={styles.tag} key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
+        {(project.liveUrl || project.githubUrl) && (
+          <div className={styles.links}>
+            {project.liveUrl && (
+              <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                ↗ <span>Se projekt</span>
+              </a>
+            )}
 
-              <div className={styles.links}>
-                {featuredProject.caseUrl && (
-                  <a href={featuredProject.caseUrl}>
-                    ↗ <span>Se case</span>
-                  </a>
-                )}
-                {featuredProject.githubUrl && (
-                  <a href={featuredProject.githubUrl}>
-                    <span aria-hidden="true">⌘</span>
-                    <span>GitHub</span>
-                  </a>
-                )}
-              </div>
-            </div>
-          </article>
-        )}
-
-        {otherProjects.length > 0 && (
-          <div className={styles.grid}>
-            {otherProjects.map((project) => (
-              <article className={styles.card} key={project.number}>
-                <div className={styles.cardPreview}>
-                  <ProjectPreview type={project.preview} />
-                </div>
-
-                <div className={styles.cardInfo}>
-                  <span className={styles.projectNumber}>
-                    {project.number}
-                  </span>
-
-                  <p className={styles.projectCategory}>
-                    {project.category}
-                  </p>
-
-                  <h3>{project.title}</h3>
-
-                  <p className={styles.description}>
-                    {project.description}
-                  </p>
-
-                  <div className={styles.tags}>
-                    {project.tags.map((tag) => (
-                      <span className={styles.tag} key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className={styles.links}>
-                    {project.caseUrl && (
-                      <a href={project.caseUrl}>
-                        ↗ <span>Se case</span>
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a href={project.githubUrl}>
-                        <span aria-hidden="true">⌘</span>
-                        <span>GitHub</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                <span aria-hidden="true">⌘</span>
+                <span>GitHub</span>
+              </a>
+            )}
           </div>
         )}
-
-        {visibleProjects.length === 0 && (
-          <p>Inga projekt matchar den valda kategorin ännu.</p>
-        )}
       </div>
-    </section>
+    </article>
   )
 }
 
