@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <header className={styles.header}>
       <a href="/" className={styles.logo}>
-        Jennie <span>Modd</span>
+    JM.
       </a>
 
       <nav className={styles.nav} aria-label="Huvudnavigation">
@@ -16,7 +16,7 @@ function Navigation() {
       </nav>
 
       <a href="#contact" className={styles.contactLink}>
-        Säg hej <span aria-hidden="true">↗</span>
+        Säg hej <span aria-hidden="true">→</span>
       </a>
     </header>
   )
