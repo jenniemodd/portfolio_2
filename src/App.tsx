@@ -7,6 +7,7 @@ import Projects from "./components/Projects"
 import Packages from "./components/Packages"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import IntroBanner from "./components/IntroBanner"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
       <main>
         <Hero />
+        <IntroBanner />
         <About />
         <Services />
         <Projects />
