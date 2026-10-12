@@ -1,4 +1,8 @@
 
+/* ========================================
+   NAVIGATION – DESKTOP
+   ======================================== */
+
 .header {
   position: absolute;
   top: 0;
@@ -9,9 +13,13 @@
   align-items: center;
   justify-content: space-between;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
+/* Logotyp */
+
 .logo {
+  flex-shrink: 0;
   font-family: var(--font-heading);
   font-size: 1.45rem;
   font-weight: 800;
@@ -22,12 +30,13 @@
   color: var(--color-pink);
 }
 
+/* Navigationslänkar */
+
 .nav {
   display: flex;
-  align-items: center;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: clamp(1rem, 3vw, 2.5rem);
   margin-left: auto;
-  margin-right: 1.5rem;
+  margin-right: clamp(1.5rem, 4vw, 4rem);
 }
 
 .nav a,
@@ -58,8 +67,11 @@
   transform-origin: left;
 }
 
+/* Kontaktlänk */
+
 .contactLink {
   display: flex;
+  flex-shrink: 0;
   min-height: 2.85rem;
   align-items: center;
   gap: 0.7rem;
@@ -72,4 +84,165 @@
 
 .contactLink:hover span {
   transform: translate(0.2rem, -0.2rem);
+}
+
+/* Hamburgermenyn är dold på desktop */
+
+.menuButton {
+  display: none;
+}
+
+
+/* ========================================
+   MOBILNAVIGATION
+   ======================================== */
+
+@media (max-width: 700px) {
+  .header {
+    height: 5rem;
+    z-index: 100;
+  }
+
+  /* Hamburgermenyns knapp */
+
+  .menuButton {
+    display: grid;
+    width: 2.8rem;
+    height: 2.8rem;
+    flex-shrink: 0;
+    padding: 0;
+    place-items: center;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    cursor: pointer;
+    z-index: 102;
+
+    transition:
+      background var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .menuButton:hover {
+    border-color: var(--color-pink);
+    background: var(--color-pink-soft);
+  }
+
+  .menuButton:focus-visible {
+    outline: 0.2rem solid var(--color-coral);
+    outline-offset: 0.2rem;
+  }
+
+  /* De tre linjerna */
+
+  .menuLines {
+    display: flex;
+    width: 1.1rem;
+    flex-direction: column;
+    gap: 0.28rem;
+  }
+
+  .menuLines span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+
+    transition:
+      transform var(--transition-fast),
+      opacity var(--transition-fast);
+  }
+
+  /* Linjerna blir ett kryss när menyn öppnas */
+
+  .menuButtonOpen .menuLines span:first-child {
+    transform: translateY(0.39rem) rotate(45deg);
+  }
+
+  .menuButtonOpen .menuLines span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuButtonOpen .menuLines span:last-child {
+    transform: translateY(-0.39rem) rotate(-45deg);
+  }
+
+  /* Dölj navigationen när den är stängd */
+
+  .nav {
+    display: none;
+  }
+
+  /* Öppen menypanel */
+
+  .navOpen {
+    position: absolute;
+    top: calc(100% - 0.25rem);
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+    box-shadow: var(--shadow);
+
+    z-index: 101;
+  }
+
+  /* Länkar i mobilmenyn */
+
+  .navOpen a {
+    display: block;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--color-line);
+
+    color: var(--color-ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition: color var(--transition-fast);
+  }
+
+  .navOpen a:last-child {
+    border-bottom: none;
+  }
+
+  .navOpen a:hover {
+    color: var(--color-pink);
+  }
+
+  /* Ingen understrykning i mobilmenyn */
+
+  .navOpen a::after {
+    display: none;
+  }
+
+  /* Kontaktlänken finns redan i menyn via Kontakt */
+
+  .contactLink {
+    display: none;
+  }
+}
+
+
+/* ========================================
+   TILLGÄNGLIGHET
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a::after,
+  .contactLink span,
+  .menuButton,
+  .menuLines span,
+  .navOpen a {
+    transition: none;
+  }
 }
