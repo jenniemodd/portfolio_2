@@ -77,6 +77,23 @@
   color: white;
 }
 
+.projectList {
+  columns: 2;
+  column-gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.projectList > * {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 600px) {
+  .projectList {
+    columns: 1;
+  }
+}
 
 /* Surfplatta */
 

@@ -20,9 +20,6 @@ function Projects() {
           (project) => project.category === activeFilter,
         )
 
-  const featuredProject = filteredProjects[0]
-  const otherProjects = filteredProjects.slice(1)
-
   return (
     <section className={styles.projects} id="projects">
       <header className={styles.header}>
@@ -34,13 +31,18 @@ function Projects() {
           något på riktigt.
         </h2>
 
-        <div className={styles.filters} aria-label="Filtrera projekt">
+        <div
+          className={styles.filters}
+          aria-label="Filtrera projekt"
+        >
           {projectFilters.map((filter) => (
             <button
               key={filter}
               type="button"
               className={`${styles.filter} ${
-                activeFilter === filter ? styles.filterActive : ""
+                activeFilter === filter
+                  ? styles.filterActive
+                  : ""
               }`}
               aria-pressed={activeFilter === filter}
               onClick={() => setActiveFilter(filter)}
@@ -52,16 +54,26 @@ function Projects() {
       </header>
 
       {filteredProjects.length > 0 ? (
-        <div className={styles.projectList}>
-          <ProjectCard project={featuredProject} featured />
-
-          {otherProjects.length > 0 && (
-            <div className={styles.grid}>
-              {otherProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          )}
+       <div
+  className={`${styles.projectList} ${
+    filteredProjects.length === 2 &&
+    filteredProjects.every(
+      (project) => project.category === "Digital marknadsföring",
+    )
+      ? styles.twoProjects
+      : ""
+  }`}
+>
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              featured={
+                index === 0 &&
+                Boolean(project.results?.length)
+              }
+            />
+          ))}
         </div>
       ) : (
         <p>Inga projekt matchar det valda filtret ännu.</p>
