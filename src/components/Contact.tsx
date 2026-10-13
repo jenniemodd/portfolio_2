@@ -1,73 +1,97 @@
 
+import styles from "./Contact.module.css"
+
 function Contact() {
   return (
-    <section id="contact">
-      <p>07 — Kontakt</p>
+    <section className={styles.contact} id="contact">
+      <div className={styles.container}>
+        <div className={styles.intro}>
+          <p className={styles.eyebrow}>06 · Kontakt</p>
 
-      <h2>Ska vi skapa något bra tillsammans?</h2>
+          <h2 className={styles.heading}>
+            Har du en
+            <br />
+            idé?
+            <br />
+            <span>Jag lyssnar.</span>
+          </h2>
 
-      <p>
-        Berätta vad du behöver hjälp med, så tar vi det
-        därifrån.
-      </p>
+          <p className={styles.description}>
+            Ett nytt uppdrag, en roll som känns rätt eller bara
+            ett digitalt problem som behöver lösas? Skriv några
+            rader.
+          </p>
 
-      <div>
-        <a href="mailto:din.epost@example.com">
-          Skicka e-post
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
+          <div className={styles.contactLinks}>
+            <a href="mailto:hej@jenniemodd.se">
+              <span aria-hidden="true">✉</span>
+              hej@jenniemodd.se
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <form className={styles.form}>
+          <div className={styles.field}>
+            <label htmlFor="name">Namn</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Ditt namn"
+              autoComplete="name"
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="email">E-post</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="du@exempel.se"
+              autoComplete="email"
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="message">
+              Vad vill du prata om?
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Berätta lite om din idé, roll eller utmaning..."
+              rows={5}
+              required
+            />
+          </div>
+
+          <button className={styles.submit} type="submit">
+            <span>Skicka meddelande</span>
+            <span className={styles.arrow} aria-hidden="true">
+              →
+            </span>
+          </button>
+        </form>
       </div>
-
-      <form>
-        <div>
-          <label htmlFor="name">Namn</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            autoComplete="name"
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email">E-post</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="subject">Vad behöver du hjälp med?</label>
-          <select id="subject" name="subject" defaultValue="">
-            <option value="" disabled>
-              Välj ett område
-            </option>
-            <option value="frontend">Frontendutveckling</option>
-            <option value="marketing">Digital marknadsföring</option>
-            <option value="seo">SEO och analys</option>
-            <option value="other">Annat</option>
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="message">Meddelande</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            required
-          />
-        </div>
-
-        <button type="submit">Skicka förfrågan</button>
-      </form>
     </section>
   )
 }

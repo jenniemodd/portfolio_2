@@ -1,0 +1,309 @@
+
+/* Sektion */
+.contact {
+  width: 100%;
+  padding-block: var(--space-section);
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: clamp(2.5rem, 6vw, 6rem);
+
+  width: var(--page);
+  margin-inline: auto;
+}
+
+/* Vänster sida */
+.intro {
+  min-width: 0;
+  padding-top: 2rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0 0 2.5rem;
+  color: var(--color-ink-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background: var(--color-ink);
+}
+
+.heading {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.heading span {
+  display: inline-block;
+  margin-top: 0.15em;
+  color: var(--color-pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.06em;
+}
+
+.description {
+  max-width: 27rem;
+  margin: 2rem 0;
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: var(--line-height-body);
+}
+
+/* Kontaktlänkar */
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contactLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+
+  color: var(--color-ink);
+  background: transparent;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.contactLinks a:hover {
+  background: var(--color-cream);
+  border-color: var(--color-ink-soft);
+}
+
+.contactLinks a:focus-visible {
+  outline: 2px solid var(--color-pink);
+  outline-offset: 3px;
+}
+
+/* Formulärpanel */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  min-width: 0;
+  padding: clamp(2rem, 4vw, 3rem);
+
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+}
+
+/* Formulärfält */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.field label {
+  color: var(--color-ink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0;
+
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-line);
+  border-radius: 0;
+
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  transition: border-color var(--transition-fast);
+}
+
+.field input {
+  min-height: 2.5rem;
+}
+
+.field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-ink-soft);
+  opacity: 0.65;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-pink);
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  box-shadow: 0 1px 0 var(--color-pink);
+}
+
+/* Skicka-knapp */
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-self: flex-start;
+
+  min-height: 3.5rem;
+  margin-top: 0.25rem;
+  padding: 0.45rem 0.5rem 0.45rem 1.35rem;
+
+  color: var(--color-paper);
+  background: var(--color-pink);
+  border: 0;
+  border-radius: 999px;
+
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.submit:hover {
+  background: var(--color-plum);
+}
+
+.submit:active {
+  transform: scale(0.98);
+}
+
+.submit:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 4px;
+}
+
+.arrow {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  place-items: center;
+
+  color: var(--color-paper);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  font-size: 1.25rem;
+  transition: transform var(--transition-fast);
+}
+
+.submit:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Surfplatta */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .intro {
+    padding-top: 0;
+  }
+
+  .heading {
+    font-size: clamp(3.5rem, 9vw, 5.5rem);
+  }
+
+  .description {
+    margin-block: 1.5rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+  .heading {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .eyebrow {
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .contactLinks {
+    gap: 0.5rem;
+  }
+
+  .contactLinks a {
+    padding-inline: 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  .form {
+    gap: 1.35rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+  }
+
+  .field textarea {
+    min-height: 7rem;
+  }
+
+  .submit {
+    width: 100%;
+  }
+}
