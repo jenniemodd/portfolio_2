@@ -1,12 +1,16 @@
 
 /* Sektion */
 .packages {
-  width: var(--page);
-  margin-inline: auto;
+  width: 100%;
   padding-block: var(--space-section);
   color: var(--color-paper);
+  background: var(--color-ink);
 }
 
+.container {
+  width: var(--page);
+  margin-inline: auto;
+}
 /* Rubrik och introduktion */
 .header {
   display: flex;
@@ -56,17 +60,19 @@
   transition:
     border-color var(--transition-fast),
     background var(--transition-fast),
-    transform var(--transition-fast);
+    box-shadow var(--transition-fast);
 }
 
 .card:hover {
-  border-color: rgba(245, 241, 237, 0.45);
+  background: var(--color-plum);
+  border-color: var(--color-pink);
+  box-shadow: var(--shadow);
 }
 
 /* Paket som framhävs */
 .featured {
-  background: var(--color-plum);
-  border-color: var(--color-pink);
+  background: transparent;
+  border-color: rgba(245, 241, 237, 0.2);
 }
 
 .featured:hover {
@@ -160,10 +166,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2.1rem;
 
   color: var(--color-paper);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -187,7 +193,7 @@
 
 .cta:hover .arrow {
   transform: translateX(3px);
-  background: var(--color-coral);
+  background: var(--color-pink-soft);
 }
 
 .cta:focus-visible {
@@ -195,6 +201,32 @@
   outline-offset: 5px;
   border-radius: 3px;
 }
+
+
+/* Pris */
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  color: var(--color-paper);
+}
+
+.price span {
+  color: rgba(245, 241, 237, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.price strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
 
 /* Surfplatta */
 @media (max-width: 900px) {

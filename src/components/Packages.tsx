@@ -7,6 +7,7 @@ type Package = {
   description: string
   features: string[]
   cta: string
+  price: string
   featured?: boolean
 }
 
@@ -23,6 +24,7 @@ const packages: Package[] = [
       "Dokumentation",
     ],
     cta: "Pris på förfrågan",
+    price: "10 000 kr",
   },
   {
     id: 2,
@@ -36,7 +38,7 @@ const packages: Package[] = [
       "Prioriterad handlingsplan",
     ],
     cta: "Pris på förfrågan",
-    featured: true,
+    price: "15 000 kr",
   },
   {
     id: 3,
@@ -50,13 +52,16 @@ const packages: Package[] = [
       "Analys & överlämning",
     ],
     cta: "Offert efter behov",
+    price: "25 000 kr",
+    featured: true,
   },
 ]
 
 function Packages() {
   return (
     <section className={styles.packages} id="packages">
-      <header className={styles.header}>
+  <div className={styles.container}>
+    <header className={styles.header}>
         <h2>
           En tydlig start.
           <br />
@@ -109,6 +114,10 @@ function Packages() {
 
             <div className={styles.cardFooter}>
               <a href="#contact" className={styles.cta}>
+                <p className={styles.price}>
+  <span>Från</span>
+  <strong>{item.price}</strong>
+</p>
                 <span>{item.cta}</span>
                 <span
                   className={styles.arrow}
@@ -120,8 +129,9 @@ function Packages() {
             </div>
           </article>
         ))}
-      </div>
-    </section>
+        </div>
+    </div>
+  </section>
   )
 }
 
