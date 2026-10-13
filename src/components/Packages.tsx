@@ -1,48 +1,125 @@
 
+import styles from "./Packages.module.css"
+
+type Package = {
+  id: number
+  name: string
+  description: string
+  features: string[]
+  cta: string
+  featured?: boolean
+}
+
+const packages: Package[] = [
+  {
+    id: 1,
+    name: "Tracking start",
+    description:
+      "För dig som vill få koll på din data och fatta bättre beslut.",
+    features: [
+      "GA4 & Tag Manager",
+      "Konverteringsspårning",
+      "Grundläggande audit",
+      "Dokumentation",
+    ],
+    cta: "Pris på förfrågan",
+  },
+  {
+    id: 2,
+    name: "Synas bättre",
+    description:
+      "En fokuserad SEO-insats som ger dig en tydlig väg framåt.",
+    features: [
+      "Teknisk SEO-check",
+      "Sökordsanalys",
+      "On-page rekommendationer",
+      "Prioriterad handlingsplan",
+    ],
+    cta: "Pris på förfrågan",
+    featured: true,
+  },
+  {
+    id: 3,
+    name: "Webb med riktning",
+    description:
+      "För en ny eller befintlig webbplats som behöver bli tydligare och vassare.",
+    features: [
+      "UX & innehållsstruktur",
+      "Responsiv Front End",
+      "Tillgänglighetscheck",
+      "Analys & överlämning",
+    ],
+    cta: "Offert efter behov",
+  },
+]
+
 function Packages() {
   return (
-    <section id="packages">
-      <p>06 — Paket och upplägg</p>
+    <section className={styles.packages} id="packages">
+      <header className={styles.header}>
+        <h2>
+          En tydlig start.
+          <br />
+          Utan krångel.
+        </h2>
 
-      <h2>Hitta upplägget som passar dig.</h2>
+        <p className={styles.intro}>
+          Några vanliga behov, paketerade för att göra
+          första steget enkelt. Behöver du något annat?
+          Då formar vi det tillsammans.
+        </p>
+      </header>
 
-      <p>
-        Tydliga upplägg för dig som vill utveckla din
-        digitala närvaro, från en enskild insats till
-        ett mer långsiktigt samarbete.
-      </p>
+      <div className={styles.packageList}>
+        {packages.map((item, index) => (
+          <article
+            key={item.id}
+            className={`${styles.card} ${
+              item.featured ? styles.featured : ""
+            }`}
+          >
+            {item.featured && (
+              <span className={styles.badge}>
+                Populärt val
+              </span>
+            )}
 
-      <div>
-        <article>
-          <p>01 — Mätning och analys</p>
-          <h3>Tracking Start</h3>
-          <p>
-            För dig som vill få bättre koll på vad som
-            händer på webbplatsen och hur besökarna agerar.
-          </p>
-          <a href="#contact">Prata med mig</a>
-        </article>
+            <div className={styles.cardHeader}>
+              <span className={styles.number}>
+                {String(index + 1).padStart(2, "0")}
+              </span>
 
-        <article>
-          <p>02 — Synlighet</p>
-          <h3>Synas bättre</h3>
-          <p>
-            För dig som vill stärka din digitala synlighet
-            och nå fler relevanta kunder.
-          </p>
-          <a href="#contact">Prata med mig</a>
-        </article>
+              <span className={styles.type}>
+                Fast paket
+              </span>
+            </div>
 
-        <article>
-          <p>03 — Webb och strategi</p>
-          <h3>Webb med riktning</h3>
-          <p>
-            För dig som vill skapa en webbplats med
-            tydlig struktur, SEO-optimerad både redaktionellt och tekniskt med fokus på konverteringsoptimering och affärsmål i fokus.
-            och affärsmål i fokus.
-          </p>
-          <a href="#contact">Prata med mig</a>
-        </article>
+            <div className={styles.cardContent}>
+              <h3>{item.name}</h3>
+              <p className={styles.description}>
+                {item.description}
+              </p>
+
+              <ul className={styles.features}>
+                {item.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className={styles.cardFooter}>
+              <a href="#contact" className={styles.cta}>
+                <span>{item.cta}</span>
+                <span
+                  className={styles.arrow}
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   )

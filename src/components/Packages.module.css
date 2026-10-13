@@ -1,0 +1,246 @@
+
+/* Sektion */
+.packages {
+  width: var(--page);
+  margin-inline: auto;
+  padding-block: var(--space-section);
+  color: var(--color-paper);
+}
+
+/* Rubrik och introduktion */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.intro {
+  max-width: 27rem;
+  margin: 0;
+  color: rgba(245, 241, 237, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Paketlayout – fler kort kan läggas till */
+.packageList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+}
+
+/* Kort */
+.card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+
+  color: var(--color-paper);
+  background: transparent;
+  border: 1px solid rgba(245, 241, 237, 0.2);
+  border-radius: var(--radius-md);
+
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.card:hover {
+  border-color: rgba(245, 241, 237, 0.45);
+}
+
+/* Paket som framhävs */
+.featured {
+  background: var(--color-plum);
+  border-color: var(--color-pink);
+}
+
+.featured:hover {
+  border-color: var(--color-pink-soft);
+}
+
+/* Etikett */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: translateY(-50%);
+
+  padding: 0.45rem 0.8rem;
+  color: var(--color-paper);
+  background: var(--color-pink);
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Nummer och pakettyp */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.number,
+.type {
+  color: rgba(245, 241, 237, 0.6);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cardContent h3 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  line-height: 1.2;
+}
+
+.description {
+  margin: 0;
+  color: rgba(245, 241, 237, 0.68);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Paketets innehåll */
+.features {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.25rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+
+  color: rgba(245, 241, 237, 0.88);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.features li::before {
+  content: "✓";
+  flex-shrink: 0;
+  color: var(--color-pink-soft);
+  font-weight: 700;
+}
+
+/* Länk längst ned i kortet */
+.cardFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(245, 241, 237, 0.2);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  color: var(--color-paper);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.arrow {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  place-items: center;
+
+  color: var(--color-paper);
+  background: var(--color-pink);
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.cta:hover .arrow {
+  transform: translateX(3px);
+  background: var(--color-coral);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--color-pink-soft);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+/* Surfplatta */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .intro {
+    max-width: 36rem;
+  }
+
+  .packageList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .header h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .packageList {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.5rem;
+  }
+}
