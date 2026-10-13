@@ -1,10 +1,26 @@
 
+import styles from "./Footer.module.css"
+
 function Footer() {
   return (
-    <footer>
-      <a href="/">Jennie Modd</a>
-      <p>Frontendutveckling & digital marknadsföring</p>
-      <p>© {new Date().getFullYear()} Jennie Modd</p>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <a
+          href="#top"
+          className={styles.logo}
+          aria-label="Till toppen av sidan"
+        >
+          JM.
+        </a>
+
+        <p className={styles.description}>
+          Front End · Digital marknadsföring · Jämtland
+        </p>
+
+        <p className={styles.copyright}>
+          © {new Date().getFullYear()} Jennie Modd, med musik och kaffe 🎶
+        </p>
+      </div>
     </footer>
   )
 }
