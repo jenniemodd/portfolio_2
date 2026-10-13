@@ -1,5 +1,4 @@
 import { packages } from "../data/packages"
-import type { Package } from "../data/packages"
 import styles from "./Packages.module.css"
 
 function Packages() {
