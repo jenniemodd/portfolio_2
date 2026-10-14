@@ -10,8 +10,8 @@ export const projects: Project[] = [
     category: "Front end-utveckling",
     tags: ["TypeScript", "HTML", "SCSS","Vite",],
     image: "/images/fairly.jpg",
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/jenniemodd/fairly-app",
+    liveUrl: "https://fairly-app.vercel.app/",
   },
    
 {
@@ -84,6 +84,7 @@ export const projects: Project[] = [
     "Episerver",
   ],
   image: "/images/ramundberget_logga.jpg",
+  liveUrl: "https://ramundbergetalpina.se/",
   results: [
   {
     value: "+20 %",
@@ -117,7 +118,7 @@ export const projects: Project[] = [
     category: "Front end-utveckling",
     tags: ["TypeScript", "Vite", "SCSS"],
     image: "/images/donut_shop.jpg",
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/jenniemodd/donut-shop",
+    liveUrl: "https://donut-shop-eta.vercel.app/",
   },
 ]

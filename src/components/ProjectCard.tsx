@@ -77,7 +77,7 @@ function ProjectCard({
               target="_blank"
               rel="noreferrer"
             >
-              Besök projektet
+              Besök hemsidan
             </a>
           )}
         </div>
