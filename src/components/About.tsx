@@ -7,9 +7,9 @@ function About() {
       <p className={styles.eyebrow}>01 · Om mig</p>
 
       <h2 className={styles.heading}>
-        Mellan människa
+        Ett bredare
         <br />
-        och maskin.
+        digital synsätt
       </h2>
 
       <div className={styles.content}>
@@ -31,17 +31,12 @@ function About() {
 
         <div className={styles.copy}>
           <p className={styles.lead}>
-            Jag är en Front End Developer med flera års
-            erfarenhet av digital marknadsföring — en
-            kombination som låter mig se både helheten
-            och detaljerna.
+            Jag är digital marknadsförare med både strategisk och praktisk erfarenhet av hela kundresan. Från att väcka intresse och attrahera nya kunder till konvertering och långsiktiga kundrelationer har jag arbetat med allt från planering och strategi till innehåll och genomförande.
           </p>
 
           <p className={styles.description}>
-            Min bakgrund inom strategi, analys, SEO och
-            konvertering har lärt mig att en snygg webb
-            aldrig är målet i sig. Den ska vara enkel att
-            använda, kännas rätt och göra verklig skillnad.
+            Just nu studerar jag till Front End Developer och lär mig att koda. Jag kompletterar min erfarenhet inom digital marknadsföring med webbutveckling, vilket ger mig möjlighet att arbeta brett för en komplett digital kundupplevelse. 
+            <br />Under tiden jag studerar tar jag mig an uppdrag inom både Digital Marknadsföring och Webbutveckling.
           </p>
 
           <div className={styles.stats}>
@@ -55,17 +50,25 @@ function About() {
             </div>
 
             <div className={styles.stat}>
-              <span className={styles.statNumber}>∞</span>
+              <span className={styles.statNumber}>4+</span>
               <p>
-                nyfikenhet på
+                år utbildning inom
                 <br />
-                människor & teknik
+                Digital Marknadsföring & teknik
+              </p>
+            </div>
+              <div className={styles.stat}>
+              <span className={styles.statNumber}>1</span>
+              <p>
+                år studier inom Front End Developer
+                <br />
+                (pågående)
               </p>
             </div>
           </div>
 
-          <a href="#contact" className={styles.button}>
-            Mer om min bakgrund
+          <a href="#projects" className={styles.button}>
+            Se mina projekt
             <span aria-hidden="true">→</span>
           </a>
         </div>
