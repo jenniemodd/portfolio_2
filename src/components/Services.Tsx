@@ -35,7 +35,7 @@ const services = [
     number: "05",
     title: "Sociala medier",
     description:
-      "Jag hjälper er att skapa innehåll och strategier som bygger varumärke och engagerar rätt målgrupp.",
+      "Be social on social! Ett klassiskt uttryck, men vad innebär det egentligen? Jag hjälper er att ta fram en strategi för sociala medier som fungerar i praktiken och som hela teamet kan arbeta med. Vi utgår från rätt målgrupp, tänker kreativt och vågar gå utanför boxen. För nej, ni behöver inte nå alla. Fokus ligger på att skapa engagemang, bygga relationer och ha roligt längs vägen.",
     skills: ["Instagram", "Facebook", "YouTube", "TikTok", "LinkedIn"],
   },
   {
