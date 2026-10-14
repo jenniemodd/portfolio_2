@@ -61,7 +61,7 @@ function Services() {
     <section className={styles.services} id="services">
       <div className={styles.inner}>
         <div className={styles.intro}>
-          <p className={styles.eyebrow}>02 · Det jag tar med mig</p>
+          <p className={styles.eyebrow}>02 · Det jag gör</p>
 
           <h2>
             Det här kan
@@ -70,7 +70,7 @@ function Services() {
           </h2>
 
           <p className={styles.introText}>
-            Strategi, teknik och kreativitet – med fokus
+            Strategi, teknik och kreativitet. Med fokus
             på helheten och det som gör skillnad.
           </p>
         </div>
