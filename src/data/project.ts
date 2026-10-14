@@ -61,9 +61,9 @@ export const projects: Project[] = [
     description: "Skolprojekt med fokus på API-utveckling. En online bokklubb, med boklistor och funktioner för att utforska böcker samt lämna recensioner.",
     category: "Front end-utveckling",
     tags: ["TypeScript", "HTML", "SCSS","Vite","Biome",],
-    image: "/images/jal-book-club.png",
-    githubUrl: "",
-    liveUrl: "",
+    image: "/images/jal_bookclub.jpg",
+    githubUrl: "https://github.com/AlexJCodes/jal-book-club",
+    liveUrl: "https://jal-book-club-seven.vercel.app/",
   },
 
  
