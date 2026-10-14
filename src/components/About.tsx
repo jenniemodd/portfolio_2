@@ -21,11 +21,11 @@ function About() {
             />
 
           <div className={styles.note}>
-            Kreativ
+            Trial
             <br />
-            problemlösare
+            error
             <br />
-            sedan alltid.
+            & repeat ✌🏼
           </div>
         </div>
 
@@ -43,9 +43,9 @@ function About() {
             <div className={styles.stat}>
               <span className={styles.statNumber}>8+</span>
               <p>
-                år inom digital
+                år arbetslivserfarenget inom
                 <br />
-                marknadsföring
+                Digital marknadsföring
               </p>
             </div>
 
@@ -60,9 +60,9 @@ function About() {
               <div className={styles.stat}>
               <span className={styles.statNumber}>1</span>
               <p>
-                år studier inom Front End Developer
+                år studier (so far!)
                 <br />
-                (pågående)
+                till Front End Developer
               </p>
             </div>
           </div>

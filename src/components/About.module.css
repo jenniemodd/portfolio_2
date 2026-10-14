@@ -79,8 +79,8 @@
   z-index: 1;
   padding: 0.9rem 1rem;
   border-radius: var(--radius-sm);
-  background: var(--color-butter);
-  color: var(--color-ink);
+  background: var(--color-pink);
+  color: var(--color-paper);
   font-size: 0.85rem;
   font-weight: 700;
   line-height: 1.3;
