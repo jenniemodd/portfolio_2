@@ -119,6 +119,7 @@
   display: flex;
   min-width: 0;
   min-height: 0;
+  align-self: stretch;
   align-items: flex-end;
   justify-content: center;
 }
@@ -134,13 +135,13 @@
 
 
 /* Mindre desktop och surfplattor */
-@media (min-width: 901px) and (max-width: 1123px) {
+@media (min-width: 601px) and (max-width: 1123px) {
   .hero {
     min-height: auto;
     padding-top: clamp(6rem, 10vh, 7rem);
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
     gap: clamp(1rem, 2.5vw, 1.5rem);
-    padding-bottom: 0;;
+    padding-bottom: 0;
   }
 
   .copy {
@@ -150,15 +151,6 @@
   .copy h1 {
     font-size: clamp(3.25rem, 7vw, 5rem);
   }
-
-   .visual {
-    align-self: stretch;
-  }
-
-   .visual img {
-    align-self: end;
-  }
-
 }
 
 /* Mobil */
