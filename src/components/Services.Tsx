@@ -14,22 +14,22 @@ const services = [
     number: "02",
     title: "Digital strategi",
     description:
-      "Jag tar fram strategier som utgår från målgrupp, kundresa, affärsmål och mätbara KPI:er.",
-    skills: ["Digital strategi", "Kundresa", "KPI:er", "Konvertering"],
+      "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassat efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
+    skills: ["Övergripande digital strategi", "Influencer marketing strategi", "Sociala medier strategi", "Innehållsstrategi", "SEO-strategi", "E-post marknadsföring strategi"],
   },
   {
     number: "03",
     title: "Analys & spårning",
     description:
-      "Jag säkerställer att rätt data samlas in så att ni kan fatta bättre beslut och optimera resultat.",
-    skills: ["GA4", "Google Tag Manager", "Konverteringsspårning", "GTM"],
+      "Hur vet vi att vi uppnått rätt mål? Jag hjälper er att göra en nulägesanalys över era digital kanaler och er hemsida. Sätta upp KPI:er och spårningsplan samt implementera eller förbättra nuvarande spårning så att ni mäter rätt saker. Jag skapar även förståelse i vad ni mäter och varför - huvudnyckeln för att man ska förstå användaren gör och skapa insikter framåt.För alla insikter är bra insikter. ",
+    skills: ["GA4", "Google Tag Manager", "Konverteringsspårning", "Analys & rapportering", "Spårningsplan", "A/B-testning"],
   },
   {
     number: "04",
     title: "Digital annonsering",
     description:
-      "Jag planerar, sätter upp och optimerar kampanjer för att nå rätt målgrupp och skapa mätbara resultat.",
-    skills: ["Google Ads", "Meta Ads", "LinkedIn Ads"],
+      "Jag planerar, ta fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetet med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
+    skills: ["Google Ads", "Meta Ads", "LinkedIn Ads", "TikTok Ads", "YouTube Ads", "ChatGPT Ads", "Pinterest Ads"],
   },
   {
     number: "05",
