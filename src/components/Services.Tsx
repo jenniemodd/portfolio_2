@@ -7,8 +7,8 @@ const services = [
     number: "01",
     title: "Frontendutveckling",
     description:
-      "Jag utvecklar och förbättrar webbplatser med fokus på användarupplevelse, tillgänglighet och konvertering.",
-    skills: ["HTML", "CSS / Sass", "JavaScript", "TypeScript", "React"],
+      "Jag hjälper er genom hela processen, från planering och design utifrån era mål och målgrupp till skiss och utveckling av en hemsida anpassad efter era behov och er budget. Fokus ligger på att skapa en hållbar och användarvänlig hemsida som fungerar många år framöver, är enkel att underhålla för er och enkelt att använda för era kunder.",
+    skills: ["HTML", "CSS / Sass", "JavaScript", "TypeScript", "React", "MysQL", "MongoDB"],
   },
   {
     number: "02",
