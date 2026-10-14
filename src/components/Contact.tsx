@@ -1,7 +1,40 @@
 
+import { useForm, ValidationError } from "@formspree/react"
 import styles from "./Contact.module.css"
 
 function Contact() {
+  const [state, handleSubmit] = useForm("mrpeyvaj")
+
+  if (state.succeeded) {
+    return (
+      <section className={styles.contact} id="contact">
+        <div className={styles.container}>
+          <div className={styles.intro}>
+            <p className={styles.eyebrow}>06 · Kontakt</p>
+
+            <h2 className={styles.heading}>
+              Tack för
+              <br />
+              ditt <span>meddelande!</span>
+            </h2>
+
+            <p className={styles.description}>
+              Ditt meddelande är skickat. Jag återkommer så
+              snart jag kan!
+            </p>
+
+            <div className={styles.contactLinks}>
+              <a href="mailto:hej@jenniemodd.se">
+                <span aria-hidden="true">✉</span>
+                hej@jenniemodd.se
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section className={styles.contact} id="contact">
       <div className={styles.container}>
@@ -46,7 +79,7 @@ function Contact() {
           </div>
         </div>
 
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.field}>
             <label htmlFor="name">Namn</label>
             <input
@@ -69,6 +102,11 @@ function Contact() {
               autoComplete="email"
               required
             />
+            <ValidationError
+              prefix="E-post"
+              field="email"
+              errors={state.errors}
+            />
           </div>
 
           <div className={styles.field}>
@@ -82,10 +120,30 @@ function Contact() {
               rows={5}
               required
             />
+            <ValidationError
+              prefix="Meddelande"
+              field="message"
+              errors={state.errors}
+            />
           </div>
 
-          <button className={styles.submit} type="submit">
-            <span>Skicka meddelande</span>
+          {state.errors && (
+            <p role="alert">
+              Något gick fel när meddelandet skulle skickas.
+              Kontrollera formuläret och försök igen.
+            </p>
+          )}
+
+          <button
+            className={styles.submit}
+            type="submit"
+            disabled={state.submitting}
+          >
+            <span>
+              {state.submitting
+                ? "Skickar..."
+                : "Skicka meddelande"}
+            </span>
             <span className={styles.arrow} aria-hidden="true">
               →
             </span>
