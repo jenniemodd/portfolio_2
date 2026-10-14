@@ -6,7 +6,7 @@ function Hero() {
     <section className={styles.hero} id="home">
       <div className={styles.copy}>
         <p className={styles.eyebrow}>
-          Front End Developer · Digital kreatör
+          Front End Developer · Digital Marketing Specialist
         </p>
 
         <h1>
@@ -16,9 +16,9 @@ function Hero() {
         </h1>
 
         <p className={styles.lead}>
-          Jag bygger digitala upplevelser där{" "}
-          <strong>kod, innehåll och affär</strong> arbetar
-          åt samma håll.
+          Jag kombinerar {" "}
+          <strong>digital marknadsföring och webbutveckling. </strong>
+          Från strategi och idé till kod och resultat.
         </p>
 
         <div className={styles.actions}>
@@ -27,13 +27,6 @@ function Hero() {
             className={`${styles.button} ${styles.primary}`}
           >
             Se mina projekt <span aria-hidden="true">→</span>
-          </a>
-
-          <a
-            href="#about"
-            className={`${styles.button} ${styles.secondary}`}
-          >
-            Lär känna mig <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
