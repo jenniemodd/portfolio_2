@@ -7,15 +7,14 @@ function Packages() {
   <div className={styles.container}>
     <header className={styles.header}>
         <h2>
-          En tydlig start.
+          Rätt hjälp.
           <br />
-          Utan krångel.
+          Där ni är.
         </h2>
 
         <p className={styles.intro}>
-          Några vanliga behov, paketerade för att göra
-          första steget enkelt. Behöver du något annat?
-          Då formar vi det tillsammans.
+          Tre paket, tre olika lösningar och utrymme för något helt eget!
+Utöver paketen hjälper jag dig även med webbutveckling och digitala insatser utifrån din verksamhets behov. Vi går igenom dina mål och hittar tillsammans en lösning som passar, oavsett om du behöver hjälp med en enskild insats eller vill ha ett mer långsiktigt samarbete. Hör av dig!
         </p>
       </header>
 

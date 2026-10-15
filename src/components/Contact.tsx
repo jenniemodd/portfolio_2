@@ -10,7 +10,7 @@ function Contact() {
       <section className={styles.contact} id="contact">
         <div className={styles.container}>
           <div className={styles.intro}>
-            <p className={styles.eyebrow}>06 · Kontakt</p>
+            <p className={styles.eyebrow}>06 · Kontakta mig</p>
 
             <h2 className={styles.heading}>
               Tack för
@@ -42,17 +42,16 @@ function Contact() {
           <p className={styles.eyebrow}>06 · Kontakt</p>
 
           <h2 className={styles.heading}>
-            Har du en
+            Nyfiken?
             <br />
-            idé?
-            <br />
-            <span>Jag lyssnar.</span>
+            <span>Hör av dig!</span>
           </h2>
 
           <p className={styles.description}>
-            Ett nytt uppdrag, en roll som känns rätt eller bara
-            ett digitalt problem som behöver lösas? Skriv några
-            rader.
+            Har du en idé, ett problem som behöver lösas eller vet du kanske inte riktigt vad du behöver hjälp med än? Hör av dig!
+Se mig som ett bollplank. Vi kan prata om dina tankar, hitta möjligheter och se om vi finner något spännande att göra tillsammans. 
+<br />Det kostar ingenting att ta ett första samtal, och du behöver inte ha allt klart från början.
+No press, no stress! Bara ett förutsättningslöst samtal, mail eller sms och en chans att se vart det leder.
           </p>
 
           <div className={styles.contactLinks}>
