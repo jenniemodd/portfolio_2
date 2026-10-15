@@ -247,6 +247,7 @@
 }
 
 
+
 .formError {
   margin-top: 1rem;
   color: #b42318;
@@ -259,6 +260,16 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+
+.fieldError {
+  margin: 6px 0 0;
+  color: #b42318;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+
 
 
 /* Surfplatta */

@@ -204,9 +204,15 @@ function Contact() {
               aria-describedby={formErrors.email ? "email-error" : undefined}
               required
             />
-            {formErrors.email && (
-              <p id="email-error" role="alert">{formErrors.email}</p>
-            )}
+  {formErrors.email && (
+  <p
+    id="email-error"
+    className={styles.fieldError}
+    role="alert"
+  >
+    {formErrors.email}
+  </p>
+)}
             <ValidationError
               prefix="E-post"
               field="email"
@@ -229,7 +235,7 @@ function Contact() {
               required
             />
             {formErrors.phone && (
-              <p id="phone-error" role="alert">{formErrors.phone}</p>
+              <p id="phone-error" className={styles.fieldError} role="alert">{formErrors.phone}</p>
             )}
           </div>
 
@@ -247,7 +253,7 @@ function Contact() {
               required
             />
             {formErrors.subject && (
-              <p id="subject-error" role="alert">{formErrors.subject}</p>
+              <p id="subject-error" className={styles.fieldError} role="alert">{formErrors.subject}</p>
             )}
           </div>
 
@@ -265,7 +271,7 @@ function Contact() {
               required
             />
             {formErrors.message && (
-              <p id="message-error" role="alert">{formErrors.message}</p>
+              <p id="message-error" className={styles.fieldError} role="alert">{formErrors.message}</p>
             )}
             <ValidationError
               prefix="Meddelande"
