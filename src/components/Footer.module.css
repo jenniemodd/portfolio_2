@@ -47,13 +47,22 @@
     padding-block: 1.25rem;
   }
 
+   .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .description {
-    order: 3;
-    width: 100%;
+    order: 1;
     text-align: center;
   }
 
   .copyright {
+    order: 2;
+    width: 100%;
+    text-align: center;
     font-size: 0.7rem;
   }
+
 }
