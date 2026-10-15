@@ -10,16 +10,27 @@ import ProjectCard from "./ProjectCard"
 import styles from "./Projects.module.css"
 
 function Projects() {
-  const [activeFilter, setActiveFilter] =
-    useState<ProjectFilter>("Alla")
+const [selectedTags, setSelectedTags] = useState<ProjectFilter[]>([])
 
-  const filteredProjects: Project[] =
-    activeFilter === "Alla"
-      ? projects
-      : projects.filter(
-          (project) => project.category === activeFilter,
-        )
+const filteredProjects: Project[] =
+  selectedTags.length === 0
+    ? projects
+    : projects.filter((project) =>
+        selectedTags.includes(project.category),
+      )
 
+function toggleFilter(filter: ProjectFilter) {
+  if (filter === "Alla") {
+    setSelectedTags([])
+    return
+  }
+
+  setSelectedTags((currentTags) =>
+    currentTags.includes(filter)
+      ? currentTags.filter((tag) => tag !== filter)
+      : [...currentTags, filter],
+  )
+}
   return (
     <section className={styles.projects} id="projects">
       <header className={styles.header}>
@@ -35,21 +46,28 @@ function Projects() {
           className={styles.filters}
           aria-label="Filtrera projekt"
         >
-          {projectFilters.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              className={`${styles.filter} ${
-                activeFilter === filter
-                  ? styles.filterActive
-                  : ""
-              }`}
-              aria-pressed={activeFilter === filter}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </button>
-          ))}
+   
+{projectFilters.map((filter) => {
+  const isActive =
+    filter === "Alla"
+      ? selectedTags.length === 0
+      : selectedTags.includes(filter)
+
+  return (
+    <button
+      key={filter}
+      type="button"
+      className={`${styles.filter} ${
+        isActive ? styles.filterActive : ""
+      }`}
+      aria-pressed={isActive}
+      onClick={() => toggleFilter(filter)}
+    >
+      {filter}
+    </button>
+  )
+})}
+
         </div>
       </header>
 
