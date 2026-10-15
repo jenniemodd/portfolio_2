@@ -29,7 +29,7 @@ function Packages() {
           >
             {item.featured && (
               <span className={styles.badge}>
-                Populärt val
+                Allt i allo-paket
               </span>
             )}
 
@@ -39,7 +39,7 @@ function Packages() {
               </span>
 
               <span className={styles.type}>
-                Fast paket
+                Paketförslag
               </span>
             </div>
 
