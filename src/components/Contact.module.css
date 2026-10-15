@@ -246,6 +246,21 @@
   transform: translateX(3px);
 }
 
+
+.formError {
+  margin-top: 1rem;
+  color: #b42318;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.formError a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
 /* Surfplatta */
 @media (max-width: 900px) {
   .container {

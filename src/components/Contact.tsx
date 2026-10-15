@@ -274,12 +274,17 @@ function Contact() {
             />
           </div>
 
-          {state.errors && (
-            <p role="alert">
-              Något gick fel när meddelandet skulle skickas.
-              Kontrollera formuläret och försök igen.
-            </p>
-          )}
+         
+{state.errors && (
+  <p className={styles.formError} role="alert">
+    Meddelandet kunde inte skickas just nu.
+    Försök igen om en stund eller mejla mig direkt på{" "}
+    <a href="mailto:hej@jenniemodd.se">
+      hej@jenniemodd.se
+    </a>.
+  </p>
+)}
+
 
           <button
             className={styles.submit}
