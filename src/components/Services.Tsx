@@ -15,7 +15,7 @@ const services = [
     title: "Digital strategi",
     description:
       "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassat efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
-    skills: ["Övergripande digital strategi", "Influencer marketing strategi", "Sociala medier strategi", "Innehållsstrategi", "SEO-strategi", "E-post marknadsföring strategi"],
+    skills: ["Övergripande digital strategi", "Influencer marketing strategi", "Sociala medier strategi", "Innehållsstrategi", "SEO-strategi", "E-post marknadsföring strategi", "Content marketing strategi"],
   },
   {
     number: "03",
@@ -42,15 +42,15 @@ const services = [
     number: "06",
     title: "SEO & AI-sök",
     description:
-      "Jag förbättrar er synlighet genom teknisk SEO, relevant innehåll och anpassning för nya AI-drivna sökupplevelser.",
-    skills: ["Teknisk SEO", "On-page SEO", "Innehåll", "AI-sök"],
+      "Jag ser över er befintliga SEO, både tekniskt och redaktionellt, analyserar relevanta sökord och tar fram en konkret plan för hur ni kan öka er synlighet i sökmotorer och AI-drivna sökresultat. Det kan handla om allt från tekniska förbättringar och innehållsoptimering till att skapa nytt innehåll som möter målgruppens frågor och behov. Allt behöver inte göras på en gång. Jag hjälper er att prioritera rätt insatser utifrån er tid, budget och era resurser med fokus på det som faktiskt ger resultat.",
+    skills: ["Teknisk SEO", "On-page SEO", "SEO-optimerade texter", "AI-sök", "SEO-copywriting"],
   },
   {
     number: "07",
     title: "Innehållsproduktion",
     description:
-      "Jag skapar innehåll som stärker varumärket, möter målgruppens behov och driver engagemang i digitala kanaler.",
-    skills: ["Copywriting", "Webbinnehåll", "Content marketing", "Sociala medier"],
+      "Behöver ni nytt grafiskt material, engagerande video, uppdaterade bilder eller texter som träffar rätt? Jag hjälper er att skapa innehåll för webb och sociala medier, från fotografering, filmning och redigering till copywriting för nyhetsbrev, SEO-texter, hemsidor och kampanjmaterial. Med fyra års erfarenhet som drönaroperatör, ett stort fotointresse och erfarenhet av digital marknadsföring kombinerar jag text och visuellt innehåll för att skapa en röd tråd i er kommunikation. Alltid med fokus på ert varumärke, er målgrupp och era digitala kanaler.",
+    skills: ["Copywriting", "Videoredigering", "Fotografering","Bildredigering","Grafisk design","Content marketing", "Sociala medier"],
   },
 ]
 
