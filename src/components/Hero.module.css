@@ -133,7 +133,16 @@
   object-position: center bottom;
 }
 
+.eyebrow span {
+  white-space: nowrap;
+}
 
+@media (max-width: 600px) {
+  .eyebrow {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+}
 /* Mindre desktop och surfplattor */
 @media (min-width: 601px) and (max-width: 1123px) {
   .hero {

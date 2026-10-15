@@ -5,9 +5,11 @@ function Hero() {
   return (
     <section className={styles.hero} id="home">
       <div className={styles.copy}>
-        <p className={styles.eyebrow}>
-          Front End Developer · Digital Marketing Specialist
-        </p>
+       
+<p className={styles.eyebrow}>
+  <span>Front End Developer ·</span>
+  <span>Digital Marketing Specialist</span>
+</p>
 
         <h1>
           Jennie
