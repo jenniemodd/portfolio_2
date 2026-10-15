@@ -27,9 +27,11 @@
 
 .eyebrow::before {
   content: "";
+  display: block;
+  flex-shrink: 0;
   width: 1.5rem;
   height: 2px;
-  background: var(--color-white);
+  background-color: #fff;
 }
 
 /* Rubrik och introduktion */
