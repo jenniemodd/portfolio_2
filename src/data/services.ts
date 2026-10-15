@@ -17,14 +17,14 @@ export const services = [
     number: "03",
     title: "Analys & spårning",
     description:
-      "Hur vet vi att vi uppnått rätt mål? Jag hjälper er att göra en nulägesanalys över era digital kanaler och er hemsida. Sätta upp KPI:er och spårningsplan samt implementera eller förbättra nuvarande spårning så att ni mäter rätt saker. Jag skapar även förståelse i vad ni mäter och varför - huvudnyckeln för att man ska förstå användaren gör och skapa insikter framåt.För alla insikter är bra insikter. ",
+      "Hur vet vi att vi uppnått rätt mål? Jag hjälper er att göra en nulägesanalys över era digital kanaler och er hemsida. Sätta upp KPI:er och spårningsplan samt implementera eller förbättra nuvarande spårning så att ni mäter rätt saker. Jag skapar även förståelse i vad ni mäter och varför - huvudnyckeln för att man ska förstå användaren gör och skapa insikter framåt. För alla insikter är bra insikter. ",
     skills: ["GA4", "Google Tag Manager", "Konverteringsspårning", "Analys & rapportering", "Spårningsplan", "A/B-testning"],
   },
   {
     number: "04",
     title: "Digital annonsering",
     description:
-      "Jag planerar, ta fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetet med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
+      "Jag planerar, ta fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetat med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
     skills: ["Google Ads", "Meta Ads", "LinkedIn Ads", "TikTok Ads", "YouTube Ads", "ChatGPT Ads", "Pinterest Ads"],
   },
   {
