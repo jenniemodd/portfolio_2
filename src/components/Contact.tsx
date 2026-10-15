@@ -50,9 +50,13 @@ function Contact() {
           <p className={styles.description}>
             Har du en idé, ett problem som behöver lösas eller vet du kanske inte riktigt vad du behöver hjälp med än? Hör av dig!
 Se mig som ett bollplank. Vi kan prata om dina tankar, hitta möjligheter och se om vi finner något spännande att göra tillsammans. 
-<br />Det kostar ingenting att ta ett första samtal, och du behöver inte ha allt klart från början.
-No press, no stress! Bara ett förutsättningslöst samtal, mail eller sms och en chans att se vart det leder.
           </p>
+          <p className={styles.contactNote}>
+  Det kostar ingenting att ta ett första samtal, och du behöver
+  inte ha allt klart från början. No pressure, no stress! Bara
+  ett förutsättningslöst samtal, mail eller sms och en chans att
+  se vart det leder.
+</p>
 
           <div className={styles.contactLinks}>
             <a href="mailto:hej@jenniemodd.se">

@@ -11,6 +11,27 @@
   width: var(--page);
   margin-inline: auto;
 }
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0 0 2.5rem;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background: var(--color-white);
+}
+
 /* Rubrik och introduktion */
 .header {
   display: flex;

@@ -5,6 +5,7 @@ function Packages() {
   return (
     <section className={styles.packages} id="packages">
   <div className={styles.container}>
+    <p className={styles.eyebrow}>05 · Paket</p>
     <header className={styles.header}>
         <h2>
           Rätt hjälp.
