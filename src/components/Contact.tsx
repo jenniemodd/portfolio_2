@@ -186,7 +186,7 @@ function Contact() {
               required
             />
             {formErrors.name && (
-              <p id="name-error" role="alert">{formErrors.name}</p>
+              <p id="name-error" className={styles.fieldError} role="alert">{formErrors.name}</p>
             )}
           </div>
 
