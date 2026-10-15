@@ -55,7 +55,7 @@
 .content > p:first-child {
   margin: 0 0 0.5rem;
   color: var(--color-ink-soft);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -105,15 +105,15 @@
   margin-top: 1.25rem;
   padding: clamp(0.75rem, 1.5vw, 1.25rem);
 
-  background: var(--color-cream);
+  background: var(--color-paper);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
 }
 
 .resultsTitle {
   margin: 0 0 0.5rem;
-  color: var(--color-ink-soft);
-  font-size: 0.7rem;
+  color: var(--color-black);
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -135,12 +135,7 @@
 
 .result:nth-child(even) {
   padding-right: 0;
-  border-left: 1px solid var(--color-line);
   padding-left: 0.75rem;
-}
-
-.result:nth-child(n + 3) {
-  border-top: 1px solid var(--color-line);
 }
 
 .resultValue {
@@ -173,12 +168,12 @@
 }
 
 .tag {
-  padding: 0.35rem 0.6rem;
+  padding: 0.5rem 0.8rem;
   color: var(--color-ink-soft);
-  background: var(--color-cream);
+  background: var(--color-paper);
   border: 1px solid var(--color-line);
   border-radius: 999px;
-  font-size: 0.7rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 

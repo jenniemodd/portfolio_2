@@ -67,7 +67,7 @@
 .description {
   max-width: 27rem;
   margin: 2rem 0;
-  color: var(--color-ink-soft);
+  color: var(--color-black);
   font-size: 1rem;
   line-height: var(--line-height-body);
 }
@@ -94,7 +94,7 @@
   border: 1px solid var(--color-line);
   border-radius: 999px;
 
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
 

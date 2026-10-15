@@ -114,7 +114,7 @@ Se mig som ett bollplank. Vi kan prata om dina tankar, hitta möjligheter och se
 
           <div className={styles.field}>
             <label htmlFor="message">
-              Vad vill du prata om?
+              Vad har du på hjärtat?
             </label>
             <textarea
               id="message"
