@@ -68,7 +68,20 @@ function toggleFilter(filter: ProjectFilter) {
   )
 })}
 
-        </div>
+
+
+<button
+  type="button"
+  className={styles.clearFilters}
+  onClick={() => setSelectedTags([])}
+  disabled={selectedTags.length === 0}
+>
+  <span aria-hidden="true">↺</span>
+  Rensa val
+</button>
+ </div>
+
+
       </header>
 
       {filteredProjects.length > 0 ? (

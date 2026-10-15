@@ -44,11 +44,14 @@
 
 /* Filterknappar */
 
+
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 12px;
 }
+
 
 .filter {
   min-height: 2.65rem;
@@ -102,6 +105,46 @@
   width: 100%;
   margin-bottom: 0;
 }
+
+
+.clearFilters {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 8px 4px;
+  border: none;
+    flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: 4px;
+  background: transparent;
+
+  color: #666;
+  font: inherit;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clearFilters:hover:not(:disabled) {
+  color: #222;
+}
+
+.clearFilters:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.clearFilters:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 
 @media (max-width: 600px) {
   .twoProjects {
