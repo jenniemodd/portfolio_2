@@ -39,7 +39,7 @@ export const packages: Package[] = [
   },
   {
     id: 3,
-    name: "Digital marknadsföring, allt i allopaket",
+    name: "Digital marknadsföring",
     description:
       "Vill ni komma igång med digital marknadsföring, få ordning på det ni redan gör eller ta nästa steg? Jag hjälper er att hitta rätt väg framåt, från strategi, till implementation och resultat. Allt utifrån era mål, er budget och era resurser.",
     features: [
