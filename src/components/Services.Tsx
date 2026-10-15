@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import styles from "./Services.module.css"
-import { services } from "../../data/services";
+import { services } from "../data/services";
 
 
 function Services() {
