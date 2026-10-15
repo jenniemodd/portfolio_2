@@ -14,7 +14,7 @@ function Footer() {
         </a>
 
         <p className={styles.description}>
-          Front End · Digital marknadsföring · Jämtland
+          Front End Developer · Digital marketing Specialist · Jämtland
         </p>
 
         <p className={styles.copyright}>
