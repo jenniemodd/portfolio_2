@@ -43,7 +43,7 @@ function About() {
             <div className={styles.stat}>
               <span className={styles.statNumber}>8+</span>
               <p>
-                år arbetslivserfarenget inom
+                år arbetslivserfarenhet inom
                 <br />
                 Digital marknadsföring
               </p>
