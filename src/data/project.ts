@@ -84,7 +84,7 @@ export const projects: Project[] = [
     "Episerver",
   ],
   image: "/images/ramundberget_logga.jpg",
-  liveUrl: "https://ramundbergetalpina.se/",
+  liveUrl: "https://www.ramundberget.se/sv",
   results: [
   {
     value: "+20 %",

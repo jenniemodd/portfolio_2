@@ -149,7 +149,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/jenniemodd/"
               target="_blank"
               rel="noreferrer"
             >
@@ -157,7 +157,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://github.com/"
+              href="https://github.com/jenniemodd"
               target="_blank"
               rel="noreferrer"
             >
