@@ -189,7 +189,9 @@ En reflektion är att AI, när problem uppstår, ofta föreslår ganska komplice
 
 Jag har fortfarande mycket att lära mig om enskilda delar av koden, men när det gäller helhetsstruktur och förståelsen för ett större projekt känner jag mig ändå hyfsat trygg. Framför allt har jag fått en bättre förståelse för hur jag kan bygga vidare på ett projekt på ett genomtänkt sätt, samtidigt som jag fortsätter att lära mig längs vägen.
 
+Jag har livesatt den i vercel, men även kopplat på en domän som jag köpt via Loopia. 
+
 ## Länkar
 
 - **Liveversion:** [jenniemodd.se](https://jenniemodd.se)
-- **GitHub:** [Lägg till länk till repository](<repository-url>)
+- **GitHub:** [Lägg till länk till repository](https://github.com/jenniemodd/portfolio_2)
