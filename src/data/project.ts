@@ -107,9 +107,9 @@ export const projects: Project[] = [
     description: "Ett interaktivt spel utvecklat i ett grupprojekt med TypeScript.",
     category: "Front end-utveckling",
     tags: ["TypeScript", "Vite", "SCSS"],
-    image: "/images/alice-in-wonderland.png",
-    githubUrl: "",
-    liveUrl: "",
+    image: "/images/alice_in_wonderland.jpg",
+    githubUrl: "https://github.com/jenniemodd/alice-in-wonderland",
+    liveUrl: "https://alice-in-wonderland-six.vercel.app/",
   },
     {
     id: 6,
