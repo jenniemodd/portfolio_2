@@ -65,4 +65,11 @@
     font-size: 0.7rem;
   }
 
+  .logo {
+    order: 3;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+  }
+
 }
