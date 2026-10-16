@@ -36,10 +36,10 @@ function Navigation() {
       >
         <a href="#home" onClick={closeMenu}>Hem</a>
         <a href="#about" onClick={closeMenu}>Om mig</a>
-        <a href="#services" onClick={closeMenu}>Tjänster</a>
-        <a href="#projects" onClick={closeMenu}>Projekt</a>
-        <a href="#packages" onClick={closeMenu}>Priser</a>
-        <a href="#contact" onClick={closeMenu}>Kontakt</a>
+        <a href="#services" onClick={closeMenu}>Det jag gör</a>
+        <a href="#projects" onClick={closeMenu}>Tidigare projekt</a>
+        <a href="#packages" onClick={closeMenu}>Paket</a>
+        <a href="#contact" onClick={closeMenu}>Kontakta mig</a>
       </nav>
 
       <a
