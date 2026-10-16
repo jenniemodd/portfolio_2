@@ -118,7 +118,7 @@ src/
 │   └── services.ts
 ├── types/
 │   ├── project.ts
-│   └── package.ts
+│   └── packages.ts
 ├── App.tsx
 └── main.tsx
 
