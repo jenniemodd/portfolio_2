@@ -113,12 +113,12 @@ export const projects: Project[] = [
   },
     {
     id: 6,
-    title: "Gotfridsmunkar",
-    description: "Mitt första typescript projekt där jag byggde en enklare e-handel med produktlista, produktdetaljsida och kundvagn.",
+    title: "Packlistan",
+    description: "En packapp för friluftsliv byggd i React, där jag hämtar och sparar data via ett REST-API och kan filtrera och bocka av prylarna inför varje tur.",
     category: "Front end-utveckling",
-    tags: ["TypeScript", "Vite", "SCSS"],
-    image: "/images/donut_shop.jpg",
-    githubUrl: "https://github.com/jenniemodd/donut-shop",
-    liveUrl: "https://donut-shop-eta.vercel.app/",
+    tags: ["TypeScript", "Vite", "React", "React Router", "REST API", "Css Modules", "Custom Hooks", "localStorage", "Vercel", "ESlint"],
+    image: "/images/og-image.jpg",
+    githubUrl: "https://github.com/jenniemodd/app-outdoor-packing",
+    liveUrl: "https://app-outdoor-packing.vercel.app/",
   },
 ]
