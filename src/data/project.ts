@@ -2,18 +2,18 @@
 import type { Project } from "../types/project"
 
 export const projects: Project[] = [
-  
-  {
-    id: 5,
-    title: "Fairly",
-    description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
+
+   {
+    id: 1,
+    title: "Packlistan",
+    description: "En packapp för friluftsliv byggd i React, där jag hämtar och sparar data via ett REST-API och kan filtrera och bocka av prylarna inför varje tur.",
     category: "Front end-utveckling",
-    tags: ["TypeScript", "HTML", "SCSS","Vite",],
-    image: "/images/fairly.jpg",
-    githubUrl: "https://github.com/jenniemodd/fairly-app",
-    liveUrl: "https://fairly-app.vercel.app/",
+    tags: ["TypeScript", "Vite", "React", "React Router", "REST API", "Css Modules", "Custom Hooks", "localStorage", "Vercel", "ESlint"],
+    image: "/images/og-image.png",
+    githubUrl: "https://github.com/jenniemodd/app-outdoor-packing",
+    liveUrl: "https://app-outdoor-packing.vercel.app/",
   },
-   
+  
 {
   id: 2,
   title: "Destination Funäsfjällen",
@@ -111,14 +111,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/jenniemodd/alice-in-wonderland",
     liveUrl: "https://alice-in-wonderland-six.vercel.app/",
   },
+  
+
     {
-    id: 1,
-    title: "Packlistan",
-    description: "En packapp för friluftsliv byggd i React, där jag hämtar och sparar data via ett REST-API och kan filtrera och bocka av prylarna inför varje tur.",
+    id: 5,
+    title: "Fairly",
+    description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
     category: "Front end-utveckling",
-    tags: ["TypeScript", "Vite", "React", "React Router", "REST API", "Css Modules", "Custom Hooks", "localStorage", "Vercel", "ESlint"],
-    image: "/images/og-image.png",
-    githubUrl: "https://github.com/jenniemodd/app-outdoor-packing",
-    liveUrl: "https://app-outdoor-packing.vercel.app/",
+    tags: ["TypeScript", "HTML", "SCSS","Vite",],
+    image: "/images/fairly.jpg",
+    githubUrl: "https://github.com/jenniemodd/fairly-app",
+    liveUrl: "https://fairly-app.vercel.app/",
   },
+   
 ]
