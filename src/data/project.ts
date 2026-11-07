@@ -4,7 +4,7 @@ import type { Project } from "../types/project"
 export const projects: Project[] = [
   
   {
-    id: 1,
+    id: 5,
     title: "Fairly",
     description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
     category: "Front end-utveckling",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
 },
 
   {
-    id: 5,
+    id: 6,
     title: "Alice in Wonderland",
     description: "Ett interaktivt spel utvecklat i ett grupprojekt med TypeScript.",
     category: "Front end-utveckling",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     liveUrl: "https://alice-in-wonderland-six.vercel.app/",
   },
     {
-    id: 6,
+    id: 1,
     title: "Packlistan",
     description: "En packapp för friluftsliv byggd i React, där jag hämtar och sparar data via ett REST-API och kan filtrera och bocka av prylarna inför varje tur.",
     category: "Front end-utveckling",
