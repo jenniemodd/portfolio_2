@@ -1190,7 +1190,8 @@ function Contact() {
 								value: formData.message,
 								onChange: handleChange,
 								"aria-invalid": Boolean(formErrors.message),
-								"aria-describedby": formErrors.message ? "message-error" : void 0
+								"aria-describedby": formErrors.message ? "message-error" : void 0,
+								required: true
 							}),
 							formErrors.message && /* @__PURE__ */ jsx("p", {
 								id: "message-error",

@@ -266,6 +266,7 @@ function Contact() {
               onChange={handleChange}
               aria-invalid={Boolean(formErrors.message)}
               aria-describedby={formErrors.message ? "message-error" : undefined}
+              required
             />
             {formErrors.message && (
               <p id="message-error" className={styles.fieldError} role="alert">{formErrors.message}</p>
