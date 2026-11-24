@@ -19,7 +19,7 @@ function Hero() {
 
         <p className={styles.lead}>
           Jag kombinerar {" "}
-          <strong>digital growth marketing och webbutveckling</strong>
+          <strong>digital growth marketing och webbutveckling.</strong>
           Från strategi och idé till kod och resultat.
         </p>
 
