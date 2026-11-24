@@ -8,7 +8,7 @@ export const projects: Project[] = [
     title: "Packlistan",
     description: "En packapp för friluftsliv byggd i React, där jag hämtar och sparar data via ett REST-API och kan filtrera och bocka av prylarna inför varje tur.",
     category: "Front end-utveckling",
-    tags: ["TypeScript", "Vite", "React", "React Router", "REST API", "Css Modules", "Custom Hooks", "localStorage", "Vercel", "ESlint"],
+    tags: ["TypeScript", "Vite", "React", "React Router", "REST API", "CSS Modules", "Custom Hooks", "localStorage", "Vercel", "ESLint"],
     image: "/images/og-image.png",
     githubUrl: "https://github.com/jenniemodd/app-outdoor-packing",
     liveUrl: "https://app-outdoor-packing.vercel.app/",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     "Meta Ads",
     "GA4",
     "Innehållsproduktion",
-    "Wordpress",
+    "WordPress",
     "Digital strategi",
     "Sociala medier",
     "E-post marknadsföring",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
 },
 
   {
-    id: 6,
+    id: 5,
     title: "Alice in Wonderland",
     description: "Ett interaktivt spel utvecklat i ett grupprojekt med TypeScript.",
     category: "Front end-utveckling",
@@ -114,7 +114,7 @@ export const projects: Project[] = [
   
 
     {
-    id: 5,
+    id: 6,
     title: "Fairly",
     description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
     category: "Front end-utveckling",

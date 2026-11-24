@@ -1258,7 +1258,7 @@ function Footer() {
 				}),
 				/* @__PURE__ */ jsx("p", {
 					className: Footer_module_default.description,
-					children: "Front End Developer · Digital marketing Specialist · Jämtland"
+					children: "Front End Developer · Digital Growth Specialist · Jämtland"
 				}),
 				/* @__PURE__ */ jsxs("p", {
 					className: Footer_module_default.copyright,

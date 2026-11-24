@@ -232,7 +232,6 @@ function Contact() {
               onChange={handleChange}
               aria-invalid={Boolean(formErrors.phone)}
               aria-describedby={formErrors.phone ? "phone-error" : undefined}
-              required
             />
             {formErrors.phone && (
               <p id="phone-error" className={styles.fieldError} role="alert">{formErrors.phone}</p>
@@ -250,7 +249,6 @@ function Contact() {
               onChange={handleChange}
               aria-invalid={Boolean(formErrors.subject)}
               aria-describedby={formErrors.subject ? "subject-error" : undefined}
-              required
             />
             {formErrors.subject && (
               <p id="subject-error" className={styles.fieldError} role="alert">{formErrors.subject}</p>
@@ -268,7 +266,6 @@ function Contact() {
               onChange={handleChange}
               aria-invalid={Boolean(formErrors.message)}
               aria-describedby={formErrors.message ? "message-error" : undefined}
-              required
             />
             {formErrors.message && (
               <p id="message-error" className={styles.fieldError} role="alert">{formErrors.message}</p>

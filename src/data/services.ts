@@ -4,13 +4,13 @@ export const services = [
     title: "Frontendutveckling",
     description:
       "Jag hjälper er genom hela processen, från planering och design utifrån era mål och målgrupp till skiss och utveckling av en hemsida anpassad efter era behov och er budget. Fokus ligger på att skapa en hållbar och användarvänlig hemsida som fungerar många år framöver, är enkel att underhålla för er och enkelt att använda för era kunder.",
-    skills: ["HTML", "CSS / Sass", "JavaScript", "TypeScript", "React", "MysQL", "MongoDB"],
+    skills: ["HTML", "CSS / Sass", "JavaScript", "TypeScript", "React", "MySQL", "MongoDB"],
   },
   {
     number: "02",
     title: "Digital strategi",
     description:
-      "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassat efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
+      "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassad efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
     skills: ["Övergripande digital strategi", "Influencer marketing strategi", "Sociala medier strategi", "Innehållsstrategi", "SEO-strategi", "E-post marknadsföring strategi", "Content marketing strategi"],
   },
   {
@@ -24,7 +24,7 @@ export const services = [
     number: "04",
     title: "Digital annonsering",
     description:
-      "Jag planerar, ta fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetat med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
+      "Jag planerar, tar fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetat med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
     skills: ["Google Ads", "Meta Ads", "LinkedIn Ads", "TikTok Ads", "YouTube Ads", "ChatGPT Ads", "Pinterest Ads"],
   },
   {

@@ -9,7 +9,7 @@ function About() {
       <h2 className={styles.heading}>
         Ett bredare
         <br />
-        digital synsätt
+        digitalt synsätt
       </h2>
 
       <div className={styles.content}>
