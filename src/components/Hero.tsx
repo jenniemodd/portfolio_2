@@ -8,7 +8,7 @@ function Hero() {
        
 <p className={styles.eyebrow}>
   <span>Front End Developer ·</span>
-  <span>Digital Marketing Specialist</span>
+  <span>Digital Growth Specialist</span>
 </p>
 
         <h1>
@@ -19,7 +19,7 @@ function Hero() {
 
         <p className={styles.lead}>
           Jag kombinerar {" "}
-          <strong>digital marknadsföring och webbutveckling. </strong>
+          <strong>digital growth marketing och webbutveckling. </strong>
           Från strategi och idé till kod och resultat.
         </p>
 
@@ -36,7 +36,7 @@ function Hero() {
       <div className={styles.visual}>
         <img
           src="/images/jenniemodd-work.jpg"
-          alt="Jennie Modd, frontendutvecklare och digital marknadsförare"
+          alt="Jennie Modd, frontendutvecklare och digital growth specialist"
         />
       </div>
     </section>
