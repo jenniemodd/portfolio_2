@@ -20,8 +20,8 @@ function Services() {
           </h2>
 
           <p className={styles.introText}>
-            Strategi, teknik och kreativitet. Med fokus
-            på helheten och det som gör skillnad.
+           Frilanskonsult inom digital marknadsföring och webbutveckling – från strategi
+  och SEO/GEO till spårning, annonser och kod. Med fokus på helheten och det som gör skillnad.
           </p>
         </div>
 

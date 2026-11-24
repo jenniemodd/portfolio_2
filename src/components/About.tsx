@@ -38,7 +38,7 @@ function About() {
           <p className={styles.description}>
             Du kan se mig som en hel marknadsavdelning i en person. Jag sätter upp spårningen, tar fram och kör annonser, jobbar med SEO och GEO, skapar innehållet och bygger webben. Med AI som en naturlig del av arbetssättet kan jag jobba effektivt, utan att tumma på kvalitet eller känsla.
             
-            Just nu studerar jag till Front End Developer (examen 2027), och under tiden tar jag mig an uppdrag inom både digital marknadsföring och webbutveckling.
+            Just nu studerar jag till Front End Developer (examen 2027), och under tiden tar jag mig an uppdrag som frilanskonsult inom både digital marknadsföring och webbutveckling.
             </p>
 
           <div className={styles.stats}>
