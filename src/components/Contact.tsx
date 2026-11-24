@@ -90,7 +90,7 @@ function Contact() {
       <section className={styles.contact} id="contact">
         <div className={styles.container}>
           <div className={styles.intro}>
-            <p className={styles.eyebrow}>06 · Kontakta mig</p>
+            <p className={styles.eyebrow}>05 · Kontakta mig</p>
 
             <h2 className={styles.heading}>
               Tack för

@@ -15,10 +15,11 @@ function About() {
       <div className={styles.content}>
         <div className={styles.visual}>
             <img
-              src="/images/jennie_modd.jpg"
-              alt="Porträtt av mig, frontendutvecklare och digital growth specialist"
-              className={styles.portrait}
-            />
+  src="/images/jennie_modd.jpg"
+  alt="Porträtt av mig, frontendutvecklare och digital growth specialist"
+  className={styles.portrait}
+  loading="lazy"
+/>
 
           <div className={styles.note}>
             Trial
@@ -46,7 +47,7 @@ function About() {
               <p>
                 år arbetslivserfarenhet inom
                 <br />
-                Digital marknadsföring
+                digital marknadsföring
               </p>
             </div>
 
@@ -55,7 +56,7 @@ function About() {
               <p>
                 år utbildning inom
                 <br />
-                Digital Marknadsföring & teknik
+                digital Marknadsföring & teknik
               </p>
             </div>
               <div className={styles.stat}>

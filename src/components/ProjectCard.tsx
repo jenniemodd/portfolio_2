@@ -19,11 +19,12 @@ function ProjectCard({
         featured ? styles.featured : ""
       }`}
     >
-      <img
-        className={styles.image}
-        src={project.image}
-        alt={`Skärmbild från ${project.title}`}
-      />
+     <img
+  className={styles.image}
+  src={project.image}
+  alt={`Skärmbild från ${project.title}`}
+  loading="lazy"
+/>
 
       <div className={styles.content}>
         <p>{project.category}</p>
