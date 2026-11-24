@@ -32,11 +32,11 @@ function About() {
         <div className={styles.copy}>
           <p className={styles.lead}>
             Jag är en digital growth specialist som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer.
-       
-            Du kan se mig som en hel marknadsavdelning i en person. Jag sätter upp spårningen, tar fram och kör annonser, jobbar med SEO och GEO, skapar innehållet och bygger webben. Med AI som en naturlig del av arbetssättet kan jag jobba effektivt, utan att tumma på kvalitet eller känsla.
           </p>
 
           <p className={styles.description}>
+            Du kan se mig som en hel marknadsavdelning i en person. Jag sätter upp spårningen, tar fram och kör annonser, jobbar med SEO och GEO, skapar innehållet och bygger webben. Med AI som en naturlig del av arbetssättet kan jag jobba effektivt, utan att tumma på kvalitet eller känsla.
+            
             Just nu studerar jag till Front End Developer (examen 2027), och under tiden tar jag mig an uppdrag inom både digital marknadsföring och webbutveckling.
             </p>
 
