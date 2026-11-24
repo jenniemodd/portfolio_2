@@ -185,7 +185,7 @@ function About() {
 				children: [
 					"Ett bredare",
 					/* @__PURE__ */ jsx("br", {}),
-					"digital synsätt"
+					"digitalt synsätt"
 				]
 			}),
 			/* @__PURE__ */ jsxs("div", {
@@ -195,7 +195,8 @@ function About() {
 					children: [/* @__PURE__ */ jsx("img", {
 						src: "/images/jennie_modd.jpg",
 						alt: "Porträtt av mig, frontendutvecklare och digital growth specialist",
-						className: About_module_default.portrait
+						className: About_module_default.portrait,
+						loading: "lazy"
 					}), /* @__PURE__ */ jsxs("div", {
 						className: About_module_default.note,
 						children: [
@@ -228,7 +229,7 @@ function About() {
 									}), /* @__PURE__ */ jsxs("p", { children: [
 										"år arbetslivserfarenhet inom",
 										/* @__PURE__ */ jsx("br", {}),
-										"Digital marknadsföring"
+										"digital marknadsföring"
 									] })]
 								}),
 								/* @__PURE__ */ jsxs("div", {
@@ -239,7 +240,7 @@ function About() {
 									}), /* @__PURE__ */ jsxs("p", { children: [
 										"år utbildning inom",
 										/* @__PURE__ */ jsx("br", {}),
-										"Digital Marknadsföring & teknik"
+										"digital Marknadsföring & teknik"
 									] })]
 								}),
 								/* @__PURE__ */ jsxs("div", {
@@ -300,14 +301,14 @@ var services = [
 			"JavaScript",
 			"TypeScript",
 			"React",
-			"MysQL",
+			"MySQL",
 			"MongoDB"
 		]
 	},
 	{
 		number: "02",
 		title: "Digital strategi",
-		description: "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassat efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
+		description: "Skulle du fria till någon du precis träffat? Nä, tänkte väl inte det. Och det gör inte era kunder heller. Jag hjälper er ta fram en digital strategi anpassad efter er tid, resurser och behov som skapar synlighet från första mötet till att de blir en kund. Hemligheten? Våga smalna av. Ni behöver inte synas överallt och till alla, bara till rätt personer och i rätt tid. För ni vet vad de säger, en bra digital strategi och en röd tråd, ger en god natt sömn. ",
 		skills: [
 			"Övergripande digital strategi",
 			"Influencer marketing strategi",
@@ -321,7 +322,7 @@ var services = [
 	{
 		number: "03",
 		title: "Analys & spårning",
-		description: "Hur vet vi att vi uppnått rätt mål? Jag hjälper er att göra en nulägesanalys över era digital kanaler och er hemsida. Sätta upp KPI:er och spårningsplan samt implementera eller förbättra nuvarande spårning så att ni mäter rätt saker. Jag skapar även förståelse i vad ni mäter och varför - huvudnyckeln för att man ska förstå användaren gör och skapa insikter framåt. För alla insikter är bra insikter. ",
+		description: "Hur vet vi att vi uppnått rätt mål? Jag hjälper er att göra en nulägesanalys över era digitala kanaler och er hemsida. Sätta upp KPI:er och spårningsplan samt implementera eller förbättra nuvarande spårning så att ni mäter rätt saker. Jag skapar även förståelse i vad ni mäter och varför - huvudnyckeln för att man ska förstå vad användaren gör och skapa insikter framåt. För alla insikter är bra insikter. ",
 		skills: [
 			"GA4",
 			"Google Tag Manager",
@@ -334,7 +335,7 @@ var services = [
 	{
 		number: "04",
 		title: "Digital annonsering",
-		description: "Jag planerar, ta fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetat med Meta ads (Instagram och Facebook), Youtube, Linkedin och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
+		description: "Jag planerar, tar fram material och innehåll skräddarsytt för varje kanal, sätter upp och optimerar samt följer upp resultat för digital annonsering. Har främst arbetat med Meta ads (Instagram och Facebook), YouTube, LinkedIn och Google Ads. Jag har med mig ett strategiskt helhetstänk som kompletterar kundresan och skapar resultat. ",
 		skills: [
 			"Google Ads",
 			"Meta Ads",
@@ -476,11 +477,11 @@ var projects$1 = [
 			"React",
 			"React Router",
 			"REST API",
-			"Css Modules",
+			"CSS Modules",
 			"Custom Hooks",
 			"localStorage",
 			"Vercel",
-			"ESlint"
+			"ESLint"
 		],
 		image: "/images/og-image.png",
 		githubUrl: "https://github.com/jenniemodd/app-outdoor-packing",
@@ -497,7 +498,7 @@ var projects$1 = [
 			"Meta Ads",
 			"GA4",
 			"Innehållsproduktion",
-			"Wordpress",
+			"WordPress",
 			"Digital strategi",
 			"Sociala medier",
 			"E-post marknadsföring",
@@ -573,7 +574,7 @@ var projects$1 = [
 		]
 	},
 	{
-		id: 6,
+		id: 5,
 		title: "Alice in Wonderland",
 		description: "Ett interaktivt spel utvecklat i ett grupprojekt med TypeScript.",
 		category: "Front end-utveckling",
@@ -587,7 +588,7 @@ var projects$1 = [
 		liveUrl: "https://alice-in-wonderland-six.vercel.app/"
 	},
 	{
-		id: 5,
+		id: 6,
 		title: "Fairly",
 		description: "En budgetapp för par som vill få bättre överblick över sin gemensamma ekonomi.",
 		category: "Front end-utveckling",
@@ -633,7 +634,8 @@ function ProjectCard({ project, featured = false }) {
 		children: [/* @__PURE__ */ jsx("img", {
 			className: ProjectCard_module_default.image,
 			src: project.image,
-			alt: `Skärmbild från ${project.title}`
+			alt: `Skärmbild från ${project.title}`,
+			loading: "lazy"
 		}), /* @__PURE__ */ jsxs("div", {
 			className: ProjectCard_module_default.content,
 			children: [
@@ -840,7 +842,7 @@ function Packages() {
 			children: [
 				/* @__PURE__ */ jsx("p", {
 					className: Packages_module_default.eyebrow,
-					children: "05 · Paket"
+					children: "04 · Paket"
 				}),
 				/* @__PURE__ */ jsxs("header", {
 					className: Packages_module_default.header,
@@ -976,7 +978,7 @@ function Contact() {
 				children: [
 					/* @__PURE__ */ jsx("p", {
 						className: Contact_module_default.eyebrow,
-						children: "06 · Kontakta mig"
+						children: "05 · Kontakta mig"
 					}),
 					/* @__PURE__ */ jsxs("h2", {
 						className: Contact_module_default.heading,
@@ -1138,8 +1140,7 @@ function Contact() {
 								value: formData.phone,
 								onChange: handleChange,
 								"aria-invalid": Boolean(formErrors.phone),
-								"aria-describedby": formErrors.phone ? "phone-error" : void 0,
-								required: true
+								"aria-describedby": formErrors.phone ? "phone-error" : void 0
 							}),
 							formErrors.phone && /* @__PURE__ */ jsx("p", {
 								id: "phone-error",
@@ -1164,8 +1165,7 @@ function Contact() {
 								value: formData.subject,
 								onChange: handleChange,
 								"aria-invalid": Boolean(formErrors.subject),
-								"aria-describedby": formErrors.subject ? "subject-error" : void 0,
-								required: true
+								"aria-describedby": formErrors.subject ? "subject-error" : void 0
 							}),
 							formErrors.subject && /* @__PURE__ */ jsx("p", {
 								id: "subject-error",
@@ -1190,8 +1190,7 @@ function Contact() {
 								value: formData.message,
 								onChange: handleChange,
 								"aria-invalid": Boolean(formErrors.message),
-								"aria-describedby": formErrors.message ? "message-error" : void 0,
-								required: true
+								"aria-describedby": formErrors.message ? "message-error" : void 0
 							}),
 							formErrors.message && /* @__PURE__ */ jsx("p", {
 								id: "message-error",
