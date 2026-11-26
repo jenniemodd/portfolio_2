@@ -22,7 +22,7 @@ function Hero() {
 
         <p className={styles.lead}>
           Jag kombinerar{" "}
-          <strong>digital marknadsföring och webbutveckling</strong> – från
+          digital marknadsföring och webbutveckling – från
           strategi och idé till kod och resultat. Baserad i Funäsdalen i
           Härjedalen, med kunder i hela Sverige.
         </p>
