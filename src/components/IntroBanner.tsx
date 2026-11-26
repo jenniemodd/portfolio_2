@@ -1,9 +1,16 @@
 
 import styles from "./IntroBanner.module.css"
+import { useReveal } from "../hooks/useReveal"
 
 function IntroBanner() {
+  const reveal = useReveal<HTMLElement>()
+
   return (
-    <section className={styles.banner}>
+    <section
+      className={styles.banner}
+      {...reveal}
+      data-reveal-mode="group"
+    >
       <span className={styles.monogram} aria-hidden="true">
         JM
       </span>

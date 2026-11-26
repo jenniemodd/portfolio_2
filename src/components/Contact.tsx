@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import styles from "./Contact.module.css"
+import { useReveal } from "../hooks/useReveal"
 
 type FormData = {
   name: string
@@ -15,6 +16,7 @@ type FormErrors = Partial<Record<keyof FormData, string>>
 
 function Contact() {
   const [state, handleSubmit] = useForm("mrpeyvaj")
+  const reveal = useReveal<HTMLDivElement>()
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -117,7 +119,11 @@ function Contact() {
 
   return (
     <section className={styles.contact} id="contact">
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        {...reveal}
+        data-reveal-mode="group"
+      >
         <div className={styles.intro}>
           <p className={styles.eyebrow}>06 · Kontakt</p>
 

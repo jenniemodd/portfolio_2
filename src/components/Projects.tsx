@@ -8,9 +8,12 @@ import {
 } from "../types/project"
 import ProjectCard from "./ProjectCard"
 import styles from "./Projects.module.css"
+import { useReveal } from "../hooks/useReveal"
 
 function Projects() {
 const [selectedTags, setSelectedTags] = useState<ProjectFilter[]>([])
+const headerReveal = useReveal<HTMLElement>()
+const listReveal = useReveal<HTMLDivElement>({ threshold: 0.05 })
 
 const filteredProjects: Project[] =
   selectedTags.length === 0
@@ -33,7 +36,11 @@ function toggleFilter(filter: ProjectFilter) {
 }
   return (
     <section className={styles.projects} id="projects">
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        {...headerReveal}
+        data-reveal-mode="group"
+      >
         <p className={styles.eyebrow}>03 · Utvalda projekt</p>
 
         <h2>
@@ -94,6 +101,8 @@ function toggleFilter(filter: ProjectFilter) {
       ? styles.twoProjects
       : ""
   }`}
+  {...listReveal}
+  data-reveal-mode="group"
 >
           {filteredProjects.map((project, index) => (
             <ProjectCard

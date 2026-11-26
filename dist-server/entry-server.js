@@ -1,5 +1,5 @@
 import { renderToString } from "react-dom/server";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import { ValidationError, useForm } from "@formspree/react";
 var Navigation_module_default = {
@@ -93,16 +93,24 @@ function Navigation() {
 	});
 }
 var Hero_module_default = {
-	hero: "_hero_1xzie_2",
-	copy: "_copy_1xzie_13",
-	eyebrow: "_eyebrow_1xzie_21",
-	tagline: "_tagline_1xzie_52",
-	lead: "_lead_1xzie_63",
-	actions: "_actions_1xzie_76",
-	button: "_button_1xzie_82",
-	primary: "_primary_1xzie_113",
-	secondary: "_secondary_1xzie_118",
-	visual: "_visual_1xzie_129"
+	hero: "_hero_vpsi0_2",
+	copy: "_copy_vpsi0_13",
+	eyebrow: "_eyebrow_vpsi0_21",
+	dot: "_dot_vpsi0_48",
+	line: "_line_vpsi0_54",
+	lineInner: "_lineInner_vpsi0_61",
+	tagline: "_tagline_vpsi0_65",
+	lead: "_lead_vpsi0_76",
+	actions: "_actions_vpsi0_89",
+	button: "_button_vpsi0_95",
+	primary: "_primary_vpsi0_126",
+	secondary: "_secondary_vpsi0_131",
+	visual: "_visual_vpsi0_142",
+	"fade-up": "_fade-up_vpsi0_1",
+	"grow-line": "_grow-line_vpsi0_1",
+	"line-rise": "_line-rise_vpsi0_1",
+	"dot-pop": "_dot-pop_vpsi0_1",
+	"image-settle": "_image-settle_vpsi0_1"
 };
 //#endregion
 //#region src/components/Hero.tsx
@@ -118,10 +126,23 @@ function Hero() {
 					children: [/* @__PURE__ */ jsx("span", { children: "Front End Developer ·" }), /* @__PURE__ */ jsx("span", { children: "Digital Growth Specialist" })]
 				}),
 				/* @__PURE__ */ jsxs("h1", { children: [
-					"Jennie",
-					/* @__PURE__ */ jsx("br", {}),
-					"Modd",
-					/* @__PURE__ */ jsx("span", { children: "." }),
+					/* @__PURE__ */ jsx("span", {
+						className: Hero_module_default.line,
+						children: /* @__PURE__ */ jsx("span", {
+							className: Hero_module_default.lineInner,
+							children: "Jennie"
+						})
+					}),
+					/* @__PURE__ */ jsx("span", {
+						className: Hero_module_default.line,
+						children: /* @__PURE__ */ jsxs("span", {
+							className: Hero_module_default.lineInner,
+							children: ["Modd", /* @__PURE__ */ jsx("span", {
+								className: Hero_module_default.dot,
+								children: "."
+							})]
+						})
+					}),
 					/* @__PURE__ */ jsx("span", {
 						className: Hero_module_default.tagline,
 						children: "Konsult inom digital marknadsföring & webbutveckling"
@@ -177,11 +198,49 @@ var About_module_default = {
 	imageFrame: "_imageFrame_5isu1_237"
 };
 //#endregion
+//#region src/hooks/useReveal.ts
+/**
+* Visar ett element med en mjuk animation när det scrollas in i bild.
+*
+* Sprid resultatet på elementet: `<section {...reveal}>`.
+* Lägg till `data-reveal-mode="group"` för att istället animera
+* elementets barn ett i taget (t.ex. kort i en lista).
+*
+* Själva animationen ligger i index.css. Utan JavaScript eller med
+* "minska rörelse" aktiverat syns innehållet direkt.
+*/
+function useReveal({ threshold = .15, rootMargin = "0px 0px -8% 0px" } = {}) {
+	const ref = useRef(null);
+	const [state, setState] = useState("hidden");
+	useEffect(() => {
+		const element = ref.current;
+		if (!element) return;
+		const observer = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) {
+				setState("visible");
+				observer.disconnect();
+			}
+		}, {
+			threshold,
+			rootMargin
+		});
+		observer.observe(element);
+		return () => observer.disconnect();
+	}, [threshold, rootMargin]);
+	return {
+		ref,
+		"data-reveal": state
+	};
+}
+//#endregion
 //#region src/components/About.tsx
 function About() {
+	const reveal = useReveal();
 	return /* @__PURE__ */ jsxs("section", {
 		className: About_module_default.about,
 		id: "about",
+		...reveal,
+		"data-reveal-mode": "group",
 		children: [
 			/* @__PURE__ */ jsx("p", {
 				className: About_module_default.eyebrow,
@@ -398,11 +457,14 @@ var services = [
 //#region src/components/Services.tsx
 function Services() {
 	const [openService, setOpenService] = useState(null);
+	const reveal = useReveal();
 	return /* @__PURE__ */ jsx("section", {
 		className: Services_module_default.services,
 		id: "services",
 		children: /* @__PURE__ */ jsxs("div", {
 			className: Services_module_default.inner,
+			...reveal,
+			"data-reveal-mode": "group",
 			children: [/* @__PURE__ */ jsxs("div", {
 				className: Services_module_default.intro,
 				children: [
@@ -715,6 +777,8 @@ var Projects_module_default = {
 //#region src/components/Projects.tsx
 function Projects() {
 	const [selectedTags, setSelectedTags] = useState([]);
+	const headerReveal = useReveal();
+	const listReveal = useReveal({ threshold: .05 });
 	const filteredProjects = selectedTags.length === 0 ? projects$1 : projects$1.filter((project) => selectedTags.includes(project.category));
 	function toggleFilter(filter) {
 		if (filter === "Alla") {
@@ -728,6 +792,8 @@ function Projects() {
 		id: "projects",
 		children: [/* @__PURE__ */ jsxs("header", {
 			className: Projects_module_default.header,
+			...headerReveal,
+			"data-reveal-mode": "group",
 			children: [
 				/* @__PURE__ */ jsx("p", {
 					className: Projects_module_default.eyebrow,
@@ -764,6 +830,8 @@ function Projects() {
 			]
 		}), filteredProjects.length > 0 ? /* @__PURE__ */ jsx("div", {
 			className: `${Projects_module_default.projectList} ${filteredProjects.length === 2 && filteredProjects.every((project) => project.category === "Digital marknadsföring") ? Projects_module_default.twoProjects : ""}`,
+			...listReveal,
+			"data-reveal-mode": "group",
 			children: filteredProjects.map((project, index) => /* @__PURE__ */ jsx(ProjectCard, {
 				project,
 				featured: index === 0 && Boolean(project.results?.length)
@@ -841,6 +909,8 @@ var Packages_module_default = {
 //#endregion
 //#region src/components/Packages.tsx
 function Packages() {
+	const headerReveal = useReveal();
+	const listReveal = useReveal({ threshold: .05 });
 	return /* @__PURE__ */ jsx("section", {
 		className: Packages_module_default.packages,
 		id: "packages",
@@ -849,10 +919,13 @@ function Packages() {
 			children: [
 				/* @__PURE__ */ jsx("p", {
 					className: Packages_module_default.eyebrow,
+					"data-reveal": headerReveal["data-reveal"],
 					children: "04 · Paket"
 				}),
 				/* @__PURE__ */ jsxs("header", {
 					className: Packages_module_default.header,
+					...headerReveal,
+					"data-reveal-mode": "group",
 					children: [/* @__PURE__ */ jsxs("h2", { children: [
 						"Paket & priser.",
 						/* @__PURE__ */ jsx("br", {}),
@@ -864,6 +937,8 @@ function Packages() {
 				}),
 				/* @__PURE__ */ jsx("div", {
 					className: Packages_module_default.packageList,
+					...listReveal,
+					"data-reveal-mode": "group",
 					children: packages$1.map((item, index) => /* @__PURE__ */ jsxs("article", {
 						className: `${Packages_module_default.card} ${item.featured ? Packages_module_default.featured : ""}`,
 						children: [
@@ -940,6 +1015,7 @@ var Contact_module_default = {
 //#region src/components/Contact.tsx
 function Contact() {
 	const [state, handleSubmit] = useForm("mrpeyvaj");
+	const reveal = useReveal();
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -1019,6 +1095,8 @@ function Contact() {
 		id: "contact",
 		children: /* @__PURE__ */ jsxs("div", {
 			className: Contact_module_default.container,
+			...reveal,
+			"data-reveal-mode": "group",
 			children: [/* @__PURE__ */ jsxs("div", {
 				className: Contact_module_default.intro,
 				children: [
@@ -1287,8 +1365,11 @@ var IntroBanner_module_default = {
 //#endregion
 //#region src/components/IntroBanner.tsx
 function IntroBanner() {
+	const reveal = useReveal();
 	return /* @__PURE__ */ jsxs("section", {
 		className: IntroBanner_module_default.banner,
+		...reveal,
+		"data-reveal-mode": "group",
 		children: [/* @__PURE__ */ jsx("span", {
 			className: IntroBanner_module_default.monogram,
 			"aria-hidden": "true",

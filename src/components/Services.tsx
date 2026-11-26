@@ -2,14 +2,16 @@
 import { useState } from "react"
 import styles from "./Services.module.css"
 import { services } from "../data/services";
+import { useReveal } from "../hooks/useReveal"
 
 
 function Services() {
   const [openService, setOpenService] = useState<string | null>(null)
+  const reveal = useReveal<HTMLDivElement>()
 
   return (
     <section className={styles.services} id="services">
-      <div className={styles.inner}>
+      <div className={styles.inner} {...reveal} data-reveal-mode="group">
         <div className={styles.intro}>
           <p className={styles.eyebrow}>02 · Det jag gör</p>
 

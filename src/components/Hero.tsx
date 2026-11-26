@@ -12,9 +12,14 @@ function Hero() {
 </p>
 
         <h1>
-          Jennie
-          <br />
-          Modd<span>.</span>
+          <span className={styles.line}>
+            <span className={styles.lineInner}>Jennie</span>
+          </span>
+          <span className={styles.line}>
+            <span className={styles.lineInner}>
+              Modd<span className={styles.dot}>.</span>
+            </span>
+          </span>
           <span className={styles.tagline}>
             Konsult inom digital marknadsföring & webbutveckling
           </span>

@@ -1,9 +1,17 @@
 
 import styles from "./About.module.css"
+import { useReveal } from "../hooks/useReveal"
 
 function About() {
+  const reveal = useReveal<HTMLElement>()
+
   return (
-    <section className={styles.about} id="about">
+    <section
+      className={styles.about}
+      id="about"
+      {...reveal}
+      data-reveal-mode="group"
+    >
       <p className={styles.eyebrow}>01 · Om mig</p>
 
       <h2 className={styles.heading}>

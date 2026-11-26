@@ -1,12 +1,25 @@
 import { packages } from "../data/packages"
 import styles from "./Packages.module.css"
+import { useReveal } from "../hooks/useReveal"
 
 function Packages() {
+  const headerReveal = useReveal<HTMLElement>()
+  const listReveal = useReveal<HTMLDivElement>({ threshold: 0.05 })
+
   return (
     <section className={styles.packages} id="packages">
   <div className={styles.container}>
-    <p className={styles.eyebrow}>04 · Paket</p>
-    <header className={styles.header}>
+    <p
+      className={styles.eyebrow}
+      data-reveal={headerReveal["data-reveal"]}
+    >
+      04 · Paket
+    </p>
+    <header
+      className={styles.header}
+      {...headerReveal}
+      data-reveal-mode="group"
+    >
         <h2>
           Paket & priser.
           <br />
@@ -19,7 +32,11 @@ Utöver paketen hjälper jag dig även med webbutveckling och digitala insatser 
         </p>
       </header>
 
-      <div className={styles.packageList}>
+      <div
+        className={styles.packageList}
+        {...listReveal}
+        data-reveal-mode="group"
+      >
         {packages.map((item, index) => (
           <article
             key={item.id}
