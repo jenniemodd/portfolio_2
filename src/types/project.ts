@@ -11,6 +11,7 @@ export type Project = {
   category: "Front end-utveckling" | "Digital marknadsföring"
   tags: string[]
   image: string
+  imageAlt?: string
   githubUrl?: string
   liveUrl?: string
   results?: ProjectResult[]

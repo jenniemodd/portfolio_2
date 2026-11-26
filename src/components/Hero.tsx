@@ -40,7 +40,10 @@ function Hero() {
       <div className={styles.visual}>
         <img
           src="/images/jenniemodd-work.jpg"
-          alt="Jennie Modd, frontendutvecklare och digital growth specialist"
+          alt="Jennie Modd, konsult inom digital marknadsföring och webbutveckling"
+          width={800}
+          height={1000}
+          fetchPriority="high"
         />
       </div>
     </section>

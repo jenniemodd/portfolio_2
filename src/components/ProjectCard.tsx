@@ -22,7 +22,7 @@ function ProjectCard({
      <img
   className={styles.image}
   src={project.image}
-  alt={`Skärmbild från ${project.title}`}
+  alt={project.imageAlt ?? `Skärmbild från ${project.title}`}
   loading="lazy"
 />
 

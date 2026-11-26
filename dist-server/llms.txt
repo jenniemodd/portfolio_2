@@ -1,0 +1,36 @@
+# Jennie Modd
+
+> Konsult inom digital marknadsföring och webbutveckling, baserad i Funäsdalen i Härjedalen (Jämtlands län). Arbetar med kunder i hela Sverige – från strategi och SEO/GEO till spårning, annonser, innehåll och kod.
+
+Jennie har 8+ års arbetslivserfarenhet inom digital marknadsföring och 4+ års utbildning inom digital marknadsföring och teknik. Hon studerar till Front End Developer (examen 2027) och tar uppdrag som frilanskonsult inom både digital marknadsföring och webbutveckling.
+
+## Tjänster
+
+- Frontendutveckling: planering, design och utveckling av hållbara och användarvänliga hemsidor (HTML, CSS/Sass, JavaScript, TypeScript, React).
+- Digital strategi: övergripande digital strategi, innehålls-, SEO-, sociala medier-, e-post- och influencerstrategi.
+- Analys & spårning: nulägesanalys, KPI:er, spårningsplan, GA4, Google Tag Manager, konverteringsspårning, A/B-testning.
+- Digital annonsering: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, YouTube Ads, Pinterest Ads.
+- Sociala medier: strategi och arbete i Instagram, Facebook, YouTube, TikTok och LinkedIn.
+- SEO & AI-sök (GEO): teknisk SEO, on-page SEO, sökordsanalys, SEO-copywriting och synlighet i AI-drivna sökresultat.
+- Innehållsproduktion: copywriting, fotografering, film, drönarfoto, bild- och videoredigering, grafisk design.
+
+## Paket och priser
+
+- Spårning & analys – från 5 000 kr: spårningsplan, GA4 & Google Tag Manager, konverteringsspårning, testning & dokumentation.
+- SEO och AI-sök – från 10 000 kr: SEO-översyn, sökordsanalys & prioritering, 3 SEO- och AI-anpassade texter, rekommendationer för fortsatt optimering.
+- Digital marknadsföring – pris efter behov: strategi, kundresa, SEO, innehåll, sociala medier, spårning, analys, konverteringsoptimering, webb och innehållsproduktion.
+
+Första samtalet är kostnadsfritt.
+
+## Utvalda uppdrag
+
+- Destination Funäsfjällen: projektledning av ny webbplats och huvudansvar för marknadsföringen. Resultat: +100 % organisk trafik på ett år, +29 % omsättning, sociala medier från 22 000 till 32 000 följare, ökad synlighet i AI-sök.
+- Ramundberget Alpina AB: digital kommunikation och webbansvar med fokus på SEO, innehåll och annonsering. Resultat: +20 % organisk trafik och +25 % omsättning på ett år, sociala medier från 12 000 till 19 000 följare.
+- Webbprojekt: Packlistan (React-app för friluftsliv), JAL Book Club, Fairly (budgetapp) och Alice in Wonderland (spel i TypeScript).
+
+## Kontakt
+
+- Webbplats: https://www.jenniemodd.se/
+- E-post: hej@jenniemodd.se
+- LinkedIn: https://www.linkedin.com/in/jenniemodd/
+- GitHub: https://github.com/jenniemodd

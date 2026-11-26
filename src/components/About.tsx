@@ -16,7 +16,9 @@ function About() {
         <div className={styles.visual}>
             <img
   src="/images/jennie_modd.jpg"
-  alt="Porträtt av mig, frontendutvecklare och digital growth specialist"
+  alt="Porträtt av Jennie Modd, konsult inom digital marknadsföring och webbutveckling"
+  width={2000}
+  height={1331}
   className={styles.portrait}
   loading="lazy"
 />

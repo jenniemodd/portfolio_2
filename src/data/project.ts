@@ -34,6 +34,7 @@ export const projects: Project[] = [
 
   ],
   image: "/images/funasfjallen_logga.jpeg",
+  imageAlt: "Destination Funäsfjällens logotyp",
   liveUrl: "https://funasfjallen.se/",
   results: [
   {
@@ -84,6 +85,7 @@ export const projects: Project[] = [
     "Episerver",
   ],
   image: "/images/ramundberget_logga.jpg",
+  imageAlt: "Ramundberget Alpina AB:s logotyp",
   liveUrl: "https://www.ramundberget.se/sv",
   results: [
   {

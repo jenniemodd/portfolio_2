@@ -124,7 +124,7 @@ function Hero() {
 					/* @__PURE__ */ jsx("span", { children: "." }),
 					/* @__PURE__ */ jsx("span", {
 						className: Hero_module_default.tagline,
-						children: "Konsult inom digital marknadsföring & webbutvecklare"
+						children: "Konsult inom digital marknadsföring & webbutveckling"
 					})
 				] }),
 				/* @__PURE__ */ jsxs("p", {
@@ -132,8 +132,7 @@ function Hero() {
 					children: [
 						"Jag kombinerar",
 						" ",
-						/* @__PURE__ */ jsx("strong", { children: "digital marknadsföring och webbutveckling" }),
-						" – från strategi och idé till kod och resultat. Baserad i Funäsdalen i Härjedalen, med kunder i hela Sverige."
+						"digital marknadsföring och webbutveckling – från strategi och idé till kod och resultat. Baserad i Funäsdalen i Härjedalen, med kunder i hela Sverige."
 					]
 				}),
 				/* @__PURE__ */ jsx("div", {
@@ -152,7 +151,10 @@ function Hero() {
 			className: Hero_module_default.visual,
 			children: /* @__PURE__ */ jsx("img", {
 				src: "/images/jenniemodd-work.jpg",
-				alt: "Jennie Modd, frontendutvecklare och digital growth specialist"
+				alt: "Jennie Modd, konsult inom digital marknadsföring och webbutveckling",
+				width: 800,
+				height: 1e3,
+				fetchPriority: "high"
 			})
 		})]
 	});
@@ -199,7 +201,9 @@ function About() {
 					className: About_module_default.visual,
 					children: [/* @__PURE__ */ jsx("img", {
 						src: "/images/jennie_modd.jpg",
-						alt: "Porträtt av mig, frontendutvecklare och digital growth specialist",
+						alt: "Porträtt av Jennie Modd, konsult inom digital marknadsföring och webbutveckling",
+						width: 2e3,
+						height: 1331,
 						className: About_module_default.portrait,
 						loading: "lazy"
 					}), /* @__PURE__ */ jsxs("div", {
@@ -217,7 +221,7 @@ function About() {
 					children: [
 						/* @__PURE__ */ jsx("p", {
 							className: About_module_default.lead,
-							children: "Jag är konsult inom digital marknadsföring och webbutvecklare som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer."
+							children: "Jag är konsult inom digital marknadsföring och webbutveckling som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer."
 						}),
 						/* @__PURE__ */ jsx("p", {
 							className: About_module_default.description,
@@ -406,11 +410,7 @@ function Services() {
 						className: Services_module_default.eyebrow,
 						children: "02 · Det jag gör"
 					}),
-					/* @__PURE__ */ jsxs("h2", { children: [
-						"Digital marknadsföring & webbutveckling –",
-						/* @__PURE__ */ jsx("br", {}),
-						"det här kan jag hjälpa er med."
-					] }),
+					/* @__PURE__ */ jsx("h2", { children: "Det här kan jag hjälpa er med." }),
 					/* @__PURE__ */ jsx("p", {
 						className: Services_module_default.introText,
 						children: "Frilanskonsult inom digital marknadsföring och webbutveckling – från strategi och SEO/GEO till spårning, annonser och kod. Med fokus på helheten och det som gör skillnad."
@@ -510,6 +510,7 @@ var projects$1 = [
 			"PR"
 		],
 		image: "/images/funasfjallen_logga.jpeg",
+		imageAlt: "Destination Funäsfjällens logotyp",
 		liveUrl: "https://funasfjallen.se/",
 		results: [
 			{
@@ -562,6 +563,7 @@ var projects$1 = [
 			"Episerver"
 		],
 		image: "/images/ramundberget_logga.jpg",
+		imageAlt: "Ramundberget Alpina AB:s logotyp",
 		liveUrl: "https://www.ramundberget.se/sv",
 		results: [
 			{
@@ -639,7 +641,7 @@ function ProjectCard({ project, featured = false }) {
 		children: [/* @__PURE__ */ jsx("img", {
 			className: ProjectCard_module_default.image,
 			src: project.image,
-			alt: `Skärmbild från ${project.title}`,
+			alt: project.imageAlt ?? `Skärmbild från ${project.title}`,
 			loading: "lazy"
 		}), /* @__PURE__ */ jsxs("div", {
 			className: ProjectCard_module_default.content,
