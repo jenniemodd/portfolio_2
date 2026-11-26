@@ -19,13 +19,85 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jennie Modd",
-      "url": "https://www.jenniemodd.se/",
-      "jobTitle": "Digital Growth Specialist & Front End Developer",
-      "address": { "@type": "PostalAddress", "addressLocality": "Funäsdalen", "addressRegion": "Jämtlands län", "addressCountry": "SE" },
-      "knowsAbout": ["SEO", "GEO", "Google Ads", "Meta Ads", "Tracking", "Spårning", "Analys", "Webbutveckling", "Front End Development", "JavaScript", "API-utveckling", "Sociala medier", "Performance marketing", "Innehållsproduktion", "Digital strategi", "Konverteringsoptimering", "React", "TypeScript"],
-      "sameAs": ["https://www.linkedin.com/in/jenniemodd/"]
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.jenniemodd.se/#website",
+          "url": "https://www.jenniemodd.se/",
+          "name": "Jennie Modd",
+          "description": "Digital marknadsföring och webbutveckling – strategi, annonsering, SEO/GEO, spårning, CRO och front end-utveckling.",
+          "inLanguage": "sv-SE",
+          "publisher": { "@id": "https://www.jenniemodd.se/#business" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.jenniemodd.se/#person",
+          "name": "Jennie Modd",
+          "url": "https://www.jenniemodd.se/",
+          "image": "https://www.jenniemodd.se/images/jennie_modd.jpg",
+          "email": "mailto:hej@jenniemodd.se",
+          "jobTitle": "Digital Growth Specialist & Front End Developer",
+          "address": { "@type": "PostalAddress", "addressLocality": "Funäsdalen", "addressRegion": "Jämtlands län", "addressCountry": "SE" },
+          "alumniOf": { "@type": "EducationalOrganization", "name": "Medieinstitutet" },
+          "knowsAbout": ["SEO", "GEO", "AI-sök", "Google Ads", "Meta Ads", "Tracking", "Spårning", "GA4", "Google Tag Manager", "Analys", "Webbutveckling", "Front End Development", "JavaScript", "API-utveckling", "Sociala medier", "Performance marketing", "Innehållsproduktion", "Digital strategi", "Konverteringsoptimering", "React", "TypeScript"],
+          "sameAs": ["https://www.linkedin.com/in/jenniemodd/", "https://github.com/jenniemodd"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.jenniemodd.se/#business",
+          "name": "Jennie Modd – Digital marknadsföring & webbutveckling",
+          "url": "https://www.jenniemodd.se/",
+          "image": "https://www.jenniemodd.se/og-image.jpg",
+          "email": "hej@jenniemodd.se",
+          "description": "Frilanskonsult inom digital marknadsföring och webbutveckling – från strategi och SEO/GEO till spårning, annonser och kod.",
+          "founder": { "@id": "https://www.jenniemodd.se/#person" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Funäsdalen", "addressRegion": "Jämtlands län", "addressCountry": "SE" },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Härjedalen" },
+            { "@type": "City", "name": "Östersund" },
+            { "@type": "AdministrativeArea", "name": "Jämtlands län" },
+            { "@type": "Country", "name": "Sverige" }
+          ],
+          "priceRange": "Från 5 000 kr",
+          "knowsLanguage": ["sv", "en"],
+          "sameAs": ["https://www.linkedin.com/in/jenniemodd/"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Paket",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Spårning & analys",
+                "description": "Spårningsplan utifrån era mål, GA4 & Google Tag Manager, konverteringsspårning samt testning & dokumentation.",
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": 5000, "priceCurrency": "SEK" },
+                "itemOffered": { "@type": "Service", "name": "Spårning & analys" }
+              },
+              {
+                "@type": "Offer",
+                "name": "SEO och AI-sök",
+                "description": "SEO-översyn av befintlig webbplats, sökordsanalys & prioritering, 3 SEO- & AI-anpassade texter samt rekommendationer för fortsatt optimering.",
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": 10000, "priceCurrency": "SEK" },
+                "itemOffered": { "@type": "Service", "name": "SEO och AI-sök" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Digital marknadsföring",
+                "description": "Strategi och prioritering av digitala kanaler, kundresa, SEO, innehåll, sociala medier, spårning, analys, konverteringsoptimering och innehållsproduktion. Pris efter behov.",
+                "itemOffered": { "@type": "Service", "name": "Digital marknadsföring" }
+              }
+            ]
+          },
+          "makesOffer": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frontendutveckling" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital strategi" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analys & spårning" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital annonsering" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sociala medier" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & AI-sök" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Innehållsproduktion" } }
+          ]
+        }
+      ]
     }
     </script>
   </head>
