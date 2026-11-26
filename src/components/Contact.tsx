@@ -132,7 +132,8 @@ function Contact() {
             kanske inte riktigt vad du behöver hjälp med än? Hör av dig!
             Se mig som ett bollplank. Vi kan prata om dina tankar, hitta
             möjligheter och se om vi finner något spännande att göra
-            tillsammans.
+            tillsammans. Oavsett om det gäller ett konsultuppdrag inom
+            marknadsföring eller en ny hemsida – hör av dig!
           </p>
 
           <p className={styles.contactNote}>

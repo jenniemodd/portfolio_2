@@ -32,7 +32,7 @@ function About() {
 
         <div className={styles.copy}>
           <p className={styles.lead}>
-            Jag är en digital growth specialist som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer.
+            Jag är konsult inom digital marknadsföring och webbutveckling som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer.
           </p>
 
           <p className={styles.description}>

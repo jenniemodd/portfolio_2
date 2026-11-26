@@ -14,9 +14,9 @@ function Services() {
           <p className={styles.eyebrow}>02 · Det jag gör</p>
 
           <h2>
-            Det här kan
+            Digital marknadsföring & webbutveckling –
             <br />
-            jag hjälpa er med.
+            det här kan jag hjälpa er med.
           </h2>
 
           <p className={styles.introText}>

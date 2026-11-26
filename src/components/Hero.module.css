@@ -49,6 +49,17 @@
   color: var(--color-pink);
 }
 
+.copy h1 .tagline {
+  display: block;
+  max-width: 28rem;
+  margin-top: 1.25rem;
+  color: var(--color-ink);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
 .lead {
   max-width: 32rem;
   margin-bottom: 2.2rem;

@@ -15,12 +15,16 @@ function Hero() {
           Jennie
           <br />
           Modd<span>.</span>
+          <span className={styles.tagline}>
+            Konsult inom digital marknadsföring & webbutveckling
+          </span>
         </h1>
 
         <p className={styles.lead}>
-          Jag kombinerar {" "}
-          <strong>digital growth marketing och webbutveckling.</strong>
-          Från strategi och idé till kod och resultat.
+          Jag kombinerar{" "}
+          <strong>digital marknadsföring och webbutveckling</strong> – från
+          strategi och idé till kod och resultat. Baserad i Funäsdalen i
+          Härjedalen, med kunder i hela Sverige.
         </p>
 
         <div className={styles.actions}>

@@ -8,9 +8,9 @@ function Packages() {
     <p className={styles.eyebrow}>04 · Paket</p>
     <header className={styles.header}>
         <h2>
-          Rätt hjälp.
+          Paket & priser.
           <br />
-          Där ni är.
+          Rätt hjälp, där ni är.
         </h2>
 
         <p className={styles.intro}>

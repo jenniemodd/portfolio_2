@@ -93,15 +93,16 @@ function Navigation() {
 	});
 }
 var Hero_module_default = {
-	hero: "_hero_9gxk8_2",
-	copy: "_copy_9gxk8_13",
-	eyebrow: "_eyebrow_9gxk8_21",
-	lead: "_lead_9gxk8_52",
-	actions: "_actions_9gxk8_65",
-	button: "_button_9gxk8_71",
-	primary: "_primary_9gxk8_102",
-	secondary: "_secondary_9gxk8_107",
-	visual: "_visual_9gxk8_118"
+	hero: "_hero_1xzie_2",
+	copy: "_copy_1xzie_13",
+	eyebrow: "_eyebrow_1xzie_21",
+	tagline: "_tagline_1xzie_52",
+	lead: "_lead_1xzie_63",
+	actions: "_actions_1xzie_76",
+	button: "_button_1xzie_82",
+	primary: "_primary_1xzie_113",
+	secondary: "_secondary_1xzie_118",
+	visual: "_visual_1xzie_129"
 };
 //#endregion
 //#region src/components/Hero.tsx
@@ -120,15 +121,19 @@ function Hero() {
 					"Jennie",
 					/* @__PURE__ */ jsx("br", {}),
 					"Modd",
-					/* @__PURE__ */ jsx("span", { children: "." })
+					/* @__PURE__ */ jsx("span", { children: "." }),
+					/* @__PURE__ */ jsx("span", {
+						className: Hero_module_default.tagline,
+						children: "Konsult inom digital marknadsföring & webbutvecklare"
+					})
 				] }),
 				/* @__PURE__ */ jsxs("p", {
 					className: Hero_module_default.lead,
 					children: [
-						"Jag kombinerar ",
+						"Jag kombinerar",
 						" ",
-						/* @__PURE__ */ jsx("strong", { children: "digital growth marketing och webbutveckling." }),
-						"Från strategi och idé till kod och resultat."
+						/* @__PURE__ */ jsx("strong", { children: "digital marknadsföring och webbutveckling" }),
+						" – från strategi och idé till kod och resultat. Baserad i Funäsdalen i Härjedalen, med kunder i hela Sverige."
 					]
 				}),
 				/* @__PURE__ */ jsx("div", {
@@ -212,7 +217,7 @@ function About() {
 					children: [
 						/* @__PURE__ */ jsx("p", {
 							className: About_module_default.lead,
-							children: "Jag är en digital growth specialist som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer."
+							children: "Jag är konsult inom digital marknadsföring och webbutvecklare som arbetar med hela kundresan – från idé och strategi till genomförande. Jag stannar inte vid planen, utan är hands-on hela vägen: från att väcka intresse och locka nya kunder till konvertering och långsiktiga kundrelationer."
 						}),
 						/* @__PURE__ */ jsx("p", {
 							className: About_module_default.description,
@@ -402,9 +407,9 @@ function Services() {
 						children: "02 · Det jag gör"
 					}),
 					/* @__PURE__ */ jsxs("h2", { children: [
-						"Det här kan",
+						"Digital marknadsföring & webbutveckling –",
 						/* @__PURE__ */ jsx("br", {}),
-						"jag hjälpa er med."
+						"det här kan jag hjälpa er med."
 					] }),
 					/* @__PURE__ */ jsx("p", {
 						className: Services_module_default.introText,
@@ -847,9 +852,9 @@ function Packages() {
 				/* @__PURE__ */ jsxs("header", {
 					className: Packages_module_default.header,
 					children: [/* @__PURE__ */ jsxs("h2", { children: [
-						"Rätt hjälp.",
+						"Paket & priser.",
 						/* @__PURE__ */ jsx("br", {}),
-						"Där ni är."
+						"Rätt hjälp, där ni är."
 					] }), /* @__PURE__ */ jsx("p", {
 						className: Packages_module_default.intro,
 						children: "Tre paket, tre olika lösningar och utrymme för något helt eget! Utöver paketen hjälper jag dig även med webbutveckling och digitala insatser utifrån din verksamhets behov. Vi går igenom dina mål och hittar tillsammans en lösning som passar, oavsett om du behöver hjälp med en enskild insats eller vill ha ett mer långsiktigt samarbete. Hör av dig!"
@@ -1029,7 +1034,7 @@ function Contact() {
 					}),
 					/* @__PURE__ */ jsx("p", {
 						className: Contact_module_default.description,
-						children: "Har du en idé, ett problem som behöver lösas eller vet du kanske inte riktigt vad du behöver hjälp med än? Hör av dig! Se mig som ett bollplank. Vi kan prata om dina tankar, hitta möjligheter och se om vi finner något spännande att göra tillsammans."
+						children: "Har du en idé, ett problem som behöver lösas eller vet du kanske inte riktigt vad du behöver hjälp med än? Hör av dig! Se mig som ett bollplank. Vi kan prata om dina tankar, hitta möjligheter och se om vi finner något spännande att göra tillsammans. Oavsett om det gäller ett konsultuppdrag inom marknadsföring eller en ny hemsida – hör av dig!"
 					}),
 					/* @__PURE__ */ jsx("p", {
 						className: Contact_module_default.contactNote,
